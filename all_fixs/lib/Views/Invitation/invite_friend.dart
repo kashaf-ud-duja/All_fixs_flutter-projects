@@ -22,8 +22,8 @@ class InviteFriend extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           title: Container(
-            width: 100.w,
-            height: 100.h,
+            width: 15.w,
+            height: 15.h,
             child: Image.asset(
               "assets/images/logo.png",
               filterQuality: FilterQuality.high,
@@ -52,7 +52,7 @@ class InviteFriend extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              height: 50.h,
+              height: 10.h,
               width: double.infinity,
               decoration:
                   const BoxDecoration(color: Color.fromARGB(255, 8, 8, 8)),

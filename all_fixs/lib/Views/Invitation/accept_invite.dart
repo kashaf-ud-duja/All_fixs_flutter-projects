@@ -60,7 +60,7 @@ class AcceptInvitation extends StatelessWidget {
                     ),
                   ),
                   child: Container(
-                    height: 100,
+                    height: 18.h,
                     child: Column(
                       children: [
                         Row(
@@ -68,8 +68,8 @@ class AcceptInvitation extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(10, 20, 5, 15),
                               child: Container(
-                                width: 60,
-                                height: 60,
+                                width: 8.w,
+                                height: 8.h,
                                 child: CircularProfileAvatar(
                                   "",
                                   backgroundColor: Colors.black,
