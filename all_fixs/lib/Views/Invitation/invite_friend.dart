@@ -52,21 +52,21 @@ class InviteFriend extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              height: 10.h,
+              height: 8.h,
               width: double.infinity,
               decoration:
                   const BoxDecoration(color: Color.fromARGB(255, 8, 8, 8)),
               child: Text(
                 "Find Your Fixer",
                 style: GoogleFonts.poppins(
-                    fontSize: 16.sp,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2,
                     textStyle: const TextStyle(color: Colors.white)),
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -74,7 +74,7 @@ class InviteFriend extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Container(
-                      width: 250.w,
+                      width: 200.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: const BorderRadius.all(
@@ -87,7 +87,7 @@ class InviteFriend extends StatelessWidget {
                               blurRadius: 10,
                             )
                           ]),
-                      child: const TextField(
+                      child: TextField(
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.symmetric(
                                 vertical: 25, horizontal: 25),
@@ -97,7 +97,7 @@ class InviteFriend extends StatelessWidget {
                               color: Colors.grey,
                               fontFamily: "Nunito",
                               fontWeight: FontWeight.w500,
-                              fontSize: 15,
+                              fontSize: 15.sp,
                             ),
                             border: InputBorder.none,
                             enabledBorder: InputBorder.none,
@@ -110,8 +110,8 @@ class InviteFriend extends StatelessWidget {
                     width: 10,
                   ),
                   Container(
-                      height: 50,
-                      width: 50,
+                      height: 13.h,
+                      width: 12.w,
                       decoration: BoxDecoration(
                           color: Colors.orange[900],
                           shape: BoxShape.circle,
@@ -175,7 +175,7 @@ class InviteFriend extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 50,
             ),
           ],
         ),

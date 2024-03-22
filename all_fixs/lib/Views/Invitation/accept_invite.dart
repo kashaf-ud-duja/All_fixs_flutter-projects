@@ -16,8 +16,8 @@ class AcceptInvitation extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           title: SizedBox(
-            width: 100,
-            height: 100,
+            width: 15.h,
+            height: 15.w,
             child: Image.asset(
               "assets/images/logo.png",
               filterQuality: FilterQuality.high,
@@ -35,130 +35,132 @@ class AcceptInvitation extends StatelessWidget {
         child: Column(children: [
           Container(
             alignment: Alignment.center,
-            height: 50,
+            height: 8.h,
             width: double.infinity,
             decoration: const BoxDecoration(color: Color.fromARGB(255, 8, 8, 8)),
             child: Text(
               "Recieved Work Requests",
               style: GoogleFonts.poppins(
-                  fontSize: 16.sp,
+                  fontSize: 17.sp,
                   fontWeight: FontWeight.bold,
-                  letterSpacing: 3,
+                  letterSpacing: 2,
                   textStyle: const TextStyle(color: Colors.white)),
             ),
           ),
           SizedBox(
-      width: 20,
+      width: 50,
           ),
-          Container(
-                width: double.infinity,
-                child: Card(
-                  elevation: 10,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20.0),
+          Padding(
+            padding: const EdgeInsets.only(top:20,bottom: 5,left: 10,right: 10),
+            child: Container(
+                  width: double.infinity,
+                  child: Card(
+                    elevation: 10,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20.0),
+                      ),
                     ),
-                  ),
-                  child: Container(
-                    height: 18.h,
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 20, 5, 15),
-                              child: Container(
-                                width: 8.w,
-                                height: 8.h,
-                                child: CircularProfileAvatar(
-                                  "",
-                                  backgroundColor: Colors.black,
-                                  radius: 31,
+                    child: Container(
+                      height: 15.h,
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(10, 20, 5, 15),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  child: CircularProfileAvatar(
+                                    "",
+                                    backgroundColor: Colors.black,
+                                    radius: 31,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 5, bottom: 5),
-                                  child: Text("@Kashaf_tahir",
-                                      style: GoogleFonts.poppins(fontSize: 17)),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 0.0),
-                                  child: Text("Kashaf",
-                                      style: GoogleFonts.poppins(
-                                          color: Colors.grey)),
-                                )
-                              ],
-                            ),
-                            const Spacer(),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 10),
-                                  child: ElevatedButton(
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(Colors.green),
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 5, bottom: 5),
+                                    child: Text("@Kashaf_tahir",
+                                        style: GoogleFonts.poppins(fontSize: 16.sp )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0),
+                                    child: Text("Kashaf",
+                                        style: GoogleFonts.poppins(
+                                            color: Colors.grey)),
+                                  )
+                                ],
+                              ),
+                              const Spacer(),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.symmetric(horizontal: 15),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(Colors.green),
+                                        shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                        ),
+                                        minimumSize: MaterialStateProperty.all(
+                                            Size(130, 40)),
                                       ),
-                                      minimumSize: MaterialStateProperty.all(
-                                          Size(130, 40)),
-                                    ),
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Accept",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 15,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w500,
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Accept",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 15,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 5),
-                                  child: ElevatedButton(
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(Colors.red),
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.symmetric(horizontal: 10),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(Colors.red),
+                                        shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                        ),
+                                        minimumSize: MaterialStateProperty.all(
+                                            Size(130, 40)),
                                       ),
-                                      minimumSize: MaterialStateProperty.all(
-                                          Size(130, 40)),
-                                    ),
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Decline",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 15.sp,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w500,
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Decline",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 15.sp,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
+                                ],
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
+          ),
           const SizedBox(
             height: 50,
           ),
