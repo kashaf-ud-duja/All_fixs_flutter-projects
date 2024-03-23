@@ -89,7 +89,7 @@ class AcceptInvitation extends StatelessWidget {
                                         style: GoogleFonts.poppins(fontSize: 16.sp )),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 10.0),
+                                    padding: const EdgeInsets.only(right: 10.0),
                                     child: Text("Kashaf",
                                         style: GoogleFonts.poppins(
                                             color: Colors.grey)),
@@ -101,7 +101,7 @@ class AcceptInvitation extends StatelessWidget {
                                 children: [
                                   Padding(
                                     padding:
-                                        const EdgeInsets.symmetric(horizontal: 15),
+                                        const EdgeInsets.symmetric(horizontal: 10),
                                     child: ElevatedButton(
                                       style: ButtonStyle(
                                         backgroundColor:
@@ -127,7 +127,7 @@ class AcceptInvitation extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding:
-                                        const EdgeInsets.symmetric(horizontal: 10),
+                                        const EdgeInsets.only(right: 10, bottom: 10,top: 10),
                                     child: ElevatedButton(
                                       style: ButtonStyle(
                                         backgroundColor:
