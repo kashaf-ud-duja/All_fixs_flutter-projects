@@ -73,7 +73,10 @@ flutter:
     - assets/images/2.png
     - assets/images/fixer.jpg
     - assets/images/find.jpg
-
+    - assets/dashboard/m.jpg
+    - assets/dashboard/t.png
+    - assets/dashboard/chat.png
+    - assets/dashboard/message.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

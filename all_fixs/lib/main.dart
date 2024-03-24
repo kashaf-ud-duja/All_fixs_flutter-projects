@@ -1,3 +1,4 @@
+import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:all_fixs/Views/Auth/Forget_Password.dart';
 import 'package:all_fixs/Views/Auth/Login.dart';
@@ -18,7 +19,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'ALL FIXS',
-              home: Register(),
+              home: HomePage(),
               debugShowCheckedModeBanner: false,
             );
             }
