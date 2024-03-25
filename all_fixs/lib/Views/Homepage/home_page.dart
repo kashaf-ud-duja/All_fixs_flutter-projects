@@ -1,9 +1,16 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _homepagekey = GlobalKey();
+  List<IconData> icons=[
+    Icons.usb_rounded,
+    Icons.home,
+    Icons.notifications_active
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +40,7 @@ class HomePage extends StatelessWidget {
       /*drawer: GFDrawer(
 
       ),*/
+      bottomNavigationBar: AnimatedBottomNavigationBar(icons: icons,activeIndex: 0,onTap: (p0) {},),
     );
   }
 }

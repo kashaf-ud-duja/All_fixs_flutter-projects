@@ -42,6 +42,8 @@ dependencies:
   getwidget: ^4.0.0
   page_transition: "^2.1.0"
   flutter_sizer: ^1.0.4
+  animated_bottom_navigation_bar: ^1.3.3
+  font_awesome_flutter: ^10.7.0
   
 dev_dependencies:
   flutter_test:
