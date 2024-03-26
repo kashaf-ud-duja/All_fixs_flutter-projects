@@ -97,62 +97,62 @@ class AcceptInvitation extends StatelessWidget {
                                 ],
                               ),
                               const Spacer(),
-                              // Row(
-                              //   children: [
-                              //     Padding(
-                              //       padding:
-                              //           const EdgeInsets.symmetric(horizontal: 10),
-                              //       child: ElevatedButton(
-                              //         style: ButtonStyle(
-                              //           backgroundColor:
-                              //               MaterialStateProperty.all(Colors.green),
-                              //           shape: MaterialStateProperty.all(
-                              //             RoundedRectangleBorder(
-                              //                 borderRadius:
-                              //                     BorderRadius.circular(10)),
-                              //           ),
-                              //           minimumSize: MaterialStateProperty.all(
-                              //               Size(130, 40)),
-                              //         ),
-                              //         onPressed: () {},
-                              //         child: Text(
-                              //           "Accept",
-                              //           style: GoogleFonts.poppins(
-                              //             fontSize: 15,
-                              //             color: Colors.white,
-                              //             fontWeight: FontWeight.w500,
-                              //           ),
-                              //         ),
-                              //       ),
-                              //     ),
-                              //     Padding(
-                              //       padding:
-                              //           const EdgeInsets.only(right: 10, bottom: 10,top: 10),
-                              //       child: ElevatedButton(
-                              //         style: ButtonStyle(
-                              //           backgroundColor:
-                              //               MaterialStateProperty.all(Colors.red),
-                              //           shape: MaterialStateProperty.all(
-                              //             RoundedRectangleBorder(
-                              //                 borderRadius:
-                              //                     BorderRadius.circular(10)),
-                              //           ),
-                              //           minimumSize: MaterialStateProperty.all(
-                              //               Size(130, 40)),
-                              //         ),
-                              //         onPressed: () {},
-                              //         child: Text(
-                              //           "Decline",
-                              //           style: GoogleFonts.poppins(
-                              //             fontSize: 15.sp,
-                              //             color: Colors.white,
-                              //             fontWeight: FontWeight.w500,
-                              //           ),
-                              //         ),
-                              //       ),
-                              //     ),
-                              //   ],
-                              // )
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.symmetric(horizontal: 10),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(Colors.green),
+                                        shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                        ),
+                                        minimumSize: MaterialStateProperty.all(
+                                            Size(130, 40)),
+                                      ),
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Accept",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 15,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(right: 10, bottom: 10,top: 10),
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(Colors.red),
+                                        shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                        ),
+                                        minimumSize: MaterialStateProperty.all(
+                                            Size(130, 40)),
+                                      ),
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Decline",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 15.sp,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
                             ],
                           ),
                         ],

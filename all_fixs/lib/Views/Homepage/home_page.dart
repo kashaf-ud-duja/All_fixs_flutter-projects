@@ -2,14 +2,15 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import "package:flutter/material.dart";
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _homepagekey = GlobalKey();
   List<IconData> icons=[
-    Icons.usb_rounded,
-    Icons.home,
-    Icons.notifications_active
+    FontAwesomeIcons.user,
+   FontAwesomeIcons.house,
+   FontAwesomeIcons.bell
+    
   ];
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:all_fixs/Views/Auth/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
 import '../Widgets/Auth/auth_heading.dart';
 import '../Widgets/Auth/auth_text_field.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
