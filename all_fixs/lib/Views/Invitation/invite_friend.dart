@@ -155,25 +155,25 @@ class InviteFriend extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.orange[900]),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                minimumSize: MaterialStateProperty.all(Size(150, 50)),
-              ),
-              onPressed: () {},
-              child: Text(
-                "Find a fixer",
-                style: GoogleFonts.poppins(
-                  fontSize: 20.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
+            // ElevatedButton(
+            //   style: ButtonStyle(
+            //     backgroundColor: MaterialStateProperty.all(Colors.orange[900]),
+            //     shape: MaterialStateProperty.all(
+            //       RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(20)),
+            //     ),
+            //     minimumSize: MaterialStateProperty.all(Size(150, 50)),
+            //   ),
+            //   onPressed: () {},
+            //   child: Text(
+            //     "Find a fixer",
+            //     style: GoogleFonts.poppins(
+            //       fontSize: 20.sp,
+            //       color: Colors.white,
+            //       fontWeight: FontWeight.w500,
+            //     ),
+            //   ),
+            // ),
             const SizedBox(
               height: 50,
             ),
