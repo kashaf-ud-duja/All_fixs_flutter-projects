@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import "package:flutter/material.dart";
+import 'package:flutter/widgets.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -18,15 +19,27 @@ class _HomePageState extends State<HomePage> {
     FontAwesomeIcons.bell
   ];
 
-  int page=0;
+  int page=1;
+  int Pageview=1;
+  PageController pageController = PageController(initialPage: 1);
+
+
   Widget pageviewsection(){
     return PageView(
+      controller:pageController ,
+      onPageChanged: (value){
+        setState(() {
+print(value);
+        },
+        );
+
+      },
       children: [
         Container(
           color: Colors.amber,
         ),
          Container(
-          color: Colors.red,
+          color: Colors.green,
         ),
          Container(
           color: Colors.black,
@@ -84,7 +97,10 @@ class _HomePageState extends State<HomePage> {
         rightCornerRadius: 32,
         gapLocation: GapLocation.none,
         onTap: (p0) {
-          print(p0);
+          setState(() {
+            Pageview =p0;
+            pageController.animateToPage(p0, duration: Duration(milliseconds: 200), curve: Curves.linear);
+          });
         },
       ),
     body: pageviewsection(),
