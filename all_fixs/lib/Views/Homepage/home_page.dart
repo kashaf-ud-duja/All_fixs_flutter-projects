@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //Defining a golbal key(_homepagekey) to access the drawer functionality , and we cannot access this key outside the class in which we have defined it
+  // and if we add underscore(_) before a variable then it becomes a private variable i.e. _homepagekey
   final GlobalKey<ScaffoldState> _homepagekey = GlobalKey();
 
   List<IconData> iconslist = [
@@ -70,6 +72,7 @@ print(value);
             //"!" Mark means treat this things as a non-null thing
             _homepagekey.currentState!.openDrawer();
           },
+          //drawer is a sccafold's property so we need to define global key in order to access this drawer functionality
           child: Icon(Icons.menu),
         ),
         actions: [
