@@ -95,7 +95,7 @@ print(value);
         activeColor: Colors.orange[900],
         inactiveColor: Colors.grey[900],
         splashSpeedInMilliseconds: 300,
-        notchSmoothness:NotchSmoothness.softEdge,
+        notchSmoothness:NotchSmoothness.smoothEdge,
         leftCornerRadius: 32,
         rightCornerRadius: 32,
         gapLocation: GapLocation.none,
