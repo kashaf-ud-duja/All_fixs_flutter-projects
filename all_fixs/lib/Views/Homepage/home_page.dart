@@ -21,40 +21,34 @@ class _HomePageState extends State<HomePage> {
     FontAwesomeIcons.bell
   ];
 
-  int page=1;
-  int Pageview=1;
+  int page = 1;
+  int Pageview = 1;
   PageController pageController = PageController(initialPage: 1);
 
-
-  Widget pageviewsection(){
+// it's a function that return a widget(used to render the page)
+  Widget pageviewsection() {
     return PageView(
-      controller:pageController ,
-      onPageChanged: (value){
-        setState(() {
-print(value);
-        },
+      controller: pageController,
+      onPageChanged: (value) {
+        setState(
+          () {
+            print(value);
+          },
         );
-
       },
       children: [
         Container(
           color: Colors.amber,
         ),
-         Container(
+        Container(
           color: Colors.green,
         ),
-         Container(
+        Container(
           color: Colors.black,
         ),
       ],
     );
   }
-
-
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -95,18 +89,19 @@ print(value);
         activeColor: Colors.orange[900],
         inactiveColor: Colors.grey[900],
         splashSpeedInMilliseconds: 300,
-        notchSmoothness:NotchSmoothness.smoothEdge,
-        leftCornerRadius: 32,
-        rightCornerRadius: 32,
+        notchSmoothness: NotchSmoothness.smoothEdge,
+        // leftCornerRadius: 32,
+        // rightCornerRadius: 32,
         gapLocation: GapLocation.none,
         onTap: (p0) {
           setState(() {
-            Pageview =p0;
-            pageController.animateToPage(p0, duration: Duration(milliseconds: 200), curve: Curves.linear);
+            Pageview = p0;
+            pageController.animateToPage(p0,
+                duration: Duration(milliseconds: 200), curve: Curves.linear);
           });
         },
       ),
-    body: pageviewsection(),
+      body: pageviewsection(),
     );
   }
 }
