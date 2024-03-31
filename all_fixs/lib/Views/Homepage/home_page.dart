@@ -79,9 +79,14 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      /*drawer: GFDrawer(
+      drawer: GFDrawer(
+        child: Column(children: [
+          Expanded(child: Container()),
+          Expanded(child: Container()),
+          Expanded(child: Container()),
+        ],),
 
-      ),*/
+      ),
       bottomNavigationBar: AnimatedBottomNavigationBar(
         backgroundColor: Colors.grey[300],
         icons: iconslist,
