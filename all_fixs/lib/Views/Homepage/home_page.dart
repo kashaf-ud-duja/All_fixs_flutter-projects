@@ -1,4 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:circular_profile_avatar/circular_profile_avatar.dart';
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/widgets.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
@@ -80,12 +82,50 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: GFDrawer(
-        child: Column(children: [
-          Expanded(child: Container()),
-          Expanded(child: Container()),
-          Expanded(child: Container()),
-        ],),
-
+        child: Column(
+          children: [
+            Expanded(
+                flex: 0,
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 25),
+                          child: SizedBox(
+                            width: 50,
+                            height: 50,
+                            child: CircularProfileAvatar(
+                              "",
+                              backgroundColor: Colors.yellow,
+                              borderWidth: 1,
+                              borderColor: Colors.black,
+                              elevation: 20,
+                              radius: 40,
+                              cacheImage: true,
+                              errorWidget: (context, url, error) {
+                               return Icon(
+                                 Icons.face,
+                                 size: 50, 
+                                );
+                              },
+                              onTap: () {
+                                pageController.animateToPage(1, duration: Duration(milliseconds: 300), curve: Curves.linear);
+                              },
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )),
+            Expanded(child: Container()),
+            Expanded(child: Container()),
+          ],
+        ),
       ),
       bottomNavigationBar: AnimatedBottomNavigationBar(
         backgroundColor: Colors.grey[300],
