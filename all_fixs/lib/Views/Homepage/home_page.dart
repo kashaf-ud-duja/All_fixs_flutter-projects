@@ -113,7 +113,14 @@ class _HomePageState extends State<HomePage> {
                                 );
                               },
                               onTap: () {
-                                pageController.animateToPage(1, duration: Duration(milliseconds: 300), curve: Curves.linear);
+                                pageController.animateToPage(0, duration: Duration(milliseconds: 300), curve: Curves.linear);
+                               Navigator.of(context).pop();
+                              },
+                              animateFromOldImageOnUrlChange: true,
+                              placeHolder: (context, url) {
+                                return Container(
+                                  child: const Center(child: CircularProgressIndicator(),)
+                                );
                               },
                             ),
                           ),
