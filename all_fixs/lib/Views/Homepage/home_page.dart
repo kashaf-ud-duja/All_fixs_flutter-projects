@@ -85,50 +85,58 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Expanded(
-                flex: 0,
-                child: Row(
-                  children: [
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 25),
-                          child: SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: CircularProfileAvatar(
-                              "",
-                              backgroundColor: Colors.yellow,
-                              borderWidth: 1,
-                              borderColor: Colors.black,
-                              elevation: 20,
-                              radius: 40,
-                              cacheImage: true,
-                              errorWidget: (context, url, error) {
-                               return Icon(
-                                 Icons.face,
-                                 size: 50, 
-                                );
-                              },
-                              onTap: () {
-                                pageController.animateToPage(0, duration: Duration(milliseconds: 300), curve: Curves.linear);
-                               Navigator.of(context).pop();
-                              },
-                              animateFromOldImageOnUrlChange: true,
-                              placeHolder: (context, url) {
-                                return Container(
-                                  child: const Center(child: CircularProgressIndicator(),)
-                                );
-                              },
-                            ),
+              flex: 0,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 25.0, vertical: 25),
+                        child: SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: CircularProfileAvatar(
+                            "",
+                            backgroundColor: Colors.yellow,
+                            borderWidth: 1,
+                            borderColor: Colors.black,
+                            elevation: 20,
+                            radius: 40,
+                            cacheImage: true,
+                            errorWidget: (context, url, error) {
+                              return Icon(
+                                Icons.face,
+                                size: 50,
+                              );
+                            },
+                            onTap: () {
+                              pageController.animateToPage(0,
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.linear);
+                              Navigator.of(context).pop();
+                            },
+                            animateFromOldImageOnUrlChange: true,
+                            placeHolder: (context, url) {
+                              return Container(
+                                  child: const Center(
+                                child: CircularProgressIndicator(),
+                              ));
+                            },
                           ),
                         ),
-                      ],
-                    )
-                  ],
-                )),
+                      ),
+                      Flexible(child: Column(
+                        children: [Text("Kashaf ud duja")],
+                      ))
+                    ],
+                  )
+                ],
+              ),
+            ),
             Expanded(child: Container()),
             Expanded(child: Container()),
           ],
