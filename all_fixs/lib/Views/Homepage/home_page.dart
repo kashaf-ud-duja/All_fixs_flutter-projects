@@ -129,8 +129,22 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Flexible(child: Column(
-                        children: [Text("Kashaf ud duja")],
+                      Flexible(
+                          child: Column(
+                        children: [
+                          Text(
+                            "Kashaf ud duja",
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.bold, fontSize: 15,letterSpacing: 1),
+                          ),
+                          Text(
+                            "Kashaf@gmial.com",
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.normal, fontSize: 15),
+                          )
+                        ],
                       ))
                     ],
                   )
