@@ -131,18 +131,23 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Flexible(
                           child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             "Kashaf ud duja",
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold, fontSize: 15,letterSpacing: 1),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                letterSpacing: 1),
                           ),
                           Text(
-                            "Kashaf@gmial.com",
+                            "kashaf@gmial.com",
                             textAlign: TextAlign.left,
                             style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.normal, fontSize: 15),
+                                color: Colors.grey,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 13),
                           )
                         ],
                       ))
@@ -151,7 +156,26 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Expanded(child: Container()),
+            Expanded(
+              flex: 0,
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
+                  decoration: BoxDecoration(
+                      color: Colors.orange[900],
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  child: Text(
+
+                    "Premium",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                )
+              ],
+            )),
             Expanded(child: Container()),
           ],
         ),
