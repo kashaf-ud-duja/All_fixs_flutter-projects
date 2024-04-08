@@ -1,5 +1,5 @@
-import 'dart:js_util';
 
+import 'package:all_fixs/Views/Widgets/Homepage/drawer_list_tile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
@@ -110,14 +110,14 @@ class _HomePageState extends State<HomePage> {
                             radius: 40,
                             cacheImage: true,
                             errorWidget: (context, url, error) {
-                              return Icon(
+                              return const Icon(
                                 Icons.face,
                                 size: 50,
                               );
                             },
                             onTap: () {
                               pageController.animateToPage(0,
-                                  duration: Duration(milliseconds: 300),
+                                  duration: const Duration(milliseconds: 300),
                                   curve: Curves.linear);
                               Navigator.of(context).pop();
                             },
@@ -182,42 +182,28 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 )),
-            Expanded(
+            const Expanded(
               flex: 0,
               child: Divider(),
             ),
             Column(
               children: [
-                ListTile(
-                  title: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Icon(
-                            FontAwesomeIcons.solidCreditCard,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Text(
-                            "Subscription",
-                            textAlign: TextAlign.left,
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 15,
-                                letterSpacing: 1),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )
+              DrawerListTile(IconName: FontAwesomeIcons.solidCreditCard, TileTitle: "Subscription"),
+              DrawerListTile(IconName: Icons.settings, TileTitle: "Settings"),
+              DrawerListTile(IconName: Icons.help, TileTitle: "Help"),
+              DrawerListTile(IconName: Icons.feedback, TileTitle: "Feedback"),
+              DrawerListTile(IconName: FontAwesomeIcons.share, TileTitle: "Tell Others"),
+              DrawerListTile(IconName: Icons.star_half_sharp, TileTitle: "Rate App"),
               ],
-            )
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+               Divider(),
+               DrawerListTile(IconName: Icons.logout, TileTitle: "Logout")
+              ],
+            ))
           ],
         ),
       ),
