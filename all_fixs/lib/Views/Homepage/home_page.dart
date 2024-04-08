@@ -1,3 +1,5 @@
+import 'dart:js_util';
+
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
@@ -157,26 +159,65 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Expanded(
-              flex: 0,
+                flex: 0,
                 child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.orange[900],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(50))),
+                        child: Text(
+                          "Premium",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ),
+                    )
+                  ],
+                )),
+            Expanded(
+              flex: 0,
+              child: Divider(),
+            ),
+            Column(
               children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
-                  decoration: BoxDecoration(
-                      color: Colors.orange[900],
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
-                  child: Text(
-
-                    "Premium",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, color: Colors.white),
+                ListTile(
+                  title: Container(
+                    alignment: Alignment.center,
+                    height: 50,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Icon(
+                            FontAwesomeIcons.solidCreditCard,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            "Subscription",
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15,
+                                letterSpacing: 1),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
-            )),
-            Expanded(child: Container()),
+            )
           ],
         ),
       ),
