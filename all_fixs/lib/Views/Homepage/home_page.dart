@@ -1,4 +1,4 @@
-
+import 'package:all_fixs/Views/Homepage/Dashboard.dart';
 import 'package:all_fixs/Views/Widgets/Homepage/drawer_list_tile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
@@ -44,9 +44,7 @@ class _HomePageState extends State<HomePage> {
         Container(
           color: Colors.amber,
         ),
-        Container(
-          color: Colors.green,
-        ),
+        DashBoard(),
         Container(
           color: Colors.black,
         ),
@@ -61,9 +59,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           "ALL FIXS",
-          style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        backgroundColor: Colors.black,
         centerTitle: true,
         leading: GestureDetector(
           onTap: () {
@@ -79,11 +78,15 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.symmetric(
               horizontal: 10,
             ),
-            child: Image.asset("assets/dashboard/chatting.png"),
+            child: Image.asset(
+              "assets/dashboard/chatting.png",
+              color: Colors.white,
+            ),
           ),
         ],
       ),
       drawer: GFDrawer(
+      color: Colors.white,
         child: Column(
           children: [
             Expanded(
@@ -188,20 +191,24 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(
               children: [
-              DrawerListTile(IconName: FontAwesomeIcons.solidCreditCard, TileTitle: "Subscription"),
-              DrawerListTile(IconName: Icons.settings, TileTitle: "Settings"),
-              DrawerListTile(IconName: Icons.help, TileTitle: "Help"),
-              DrawerListTile(IconName: Icons.feedback, TileTitle: "Feedback"),
-              DrawerListTile(IconName: FontAwesomeIcons.share, TileTitle: "Tell Others"),
-              DrawerListTile(IconName: Icons.star_half_sharp, TileTitle: "Rate App"),
+                DrawerListTile(
+                    IconName: FontAwesomeIcons.solidCreditCard,
+                    TileTitle: "Subscription"),
+                DrawerListTile(IconName: Icons.settings, TileTitle: "Settings"),
+                DrawerListTile(IconName: Icons.help, TileTitle: "Help"),
+                DrawerListTile(IconName: Icons.feedback, TileTitle: "Feedback"),
+                DrawerListTile(
+                    IconName: FontAwesomeIcons.share, TileTitle: "Tell Others"),
+                DrawerListTile(
+                    IconName: Icons.star_half_sharp, TileTitle: "Rate App"),
               ],
             ),
             Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-               Divider(),
-               DrawerListTile(IconName: Icons.logout, TileTitle: "Logout")
+                Divider(),
+                DrawerListTile(IconName: Icons.logout, TileTitle: "Logout")
               ],
             ))
           ],
