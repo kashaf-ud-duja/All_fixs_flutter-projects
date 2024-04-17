@@ -1,3 +1,4 @@
+import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -38,8 +39,51 @@ class DashBoard extends StatelessWidget {
             padding: EdgeInsets.all(25),
             width: double.infinity,
             child: Card(
-              shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(20)),
-              child: Container(child: Column(),),),
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),),
+              child: Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(40)),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          child: SizedBox(
+                            width: 50,
+                            height: 50,
+                            child: CircularProfileAvatar(
+                              "",
+                              backgroundColor: Colors.yellow,
+                              borderWidth: 1,
+                              borderColor: Colors.black,
+                              elevation: 20,
+                              radius: 40,
+                              cacheImage: true,
+                              errorWidget: (context, url, error) {
+                                return const Icon(
+                                  Icons.face,
+                                  size: 50,
+                                );
+                              },
+                              onTap: () {},
+                              animateFromOldImageOnUrlChange: true,
+                              placeHolder: (context, url) {
+                                return Container(
+                                    child: const Center(
+                                  child: CircularProgressIndicator(),
+                                ));
+                              },
+                            ),
+                          ),
+                        ),
+                        Container()
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
