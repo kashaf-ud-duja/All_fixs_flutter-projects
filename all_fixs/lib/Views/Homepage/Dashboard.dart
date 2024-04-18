@@ -1,6 +1,7 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,10 +17,10 @@ class DashBoard extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "Dashboard",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.bodoniModa(
                   color: Colors.orange[900],
                   fontWeight: FontWeight.bold,
-                  fontSize: 25),
+                  fontSize: 30),
             ),
           ),
           SizedBox(
@@ -41,6 +42,7 @@ class DashBoard extends StatelessWidget {
             padding: EdgeInsets.all(25),
             width: double.infinity,
             child: Card(
+              elevation: 10,
               color: Colors.grey[300],
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
@@ -80,46 +82,79 @@ class DashBoard extends StatelessWidget {
                           ),
                         ),
                         Flexible(
+                            child: Padding(
+                          padding: const EdgeInsets.only(right: 30.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.fiber_manual_record,
+                                    color: Colors.black,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 14,
+                                  ),
+                                  Text(
+                                    "Kashaf ud duja",
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w800),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.location_on_sharp,
+                                    color: Colors.black,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 14,
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                      "Crescent textile mills faisalabad,HOUSE#SA 2 near gourmet bakery",
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ))
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
                             child: Column(
                           children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.fiber_manual_record,
-                                  color: Colors.black,
-                                  size: 15,
-                                ),
-                                SizedBox(
-                                  width: 14,
-                                ),
-                                Text(
-                                  "Kashaf ud duja",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w800),
-                                )
-                              ],
+                            Text(
+                              "Status",
+                              style: GoogleFonts.nunito(
+                                  fontSize: 12, fontWeight: FontWeight.w500,color: Colors.black),
                             ),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.location_on_sharp,
-                                  color: Colors.black,
-                                  size: 15,
-                                ),
-                                SizedBox(
-                                  width: 14,
-                                ),
-                                Text(
-                                  "Crescent textile mills faisalabad",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.normal),
-                                )
-                              ],
-                            ),
+                            Text("data")
                           ],
-                        ))
+                        )),
+                        Divider(),
+                        Flexible(child: Column()),
+                        Divider(),
+                        Flexible(child: Column())
                       ],
                     ),
                   ],

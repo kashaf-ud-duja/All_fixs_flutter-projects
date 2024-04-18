@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
             _homepagekey.currentState!.openDrawer();
           },
           //drawer is a sccafold's property so we need to define global key in order to access this drawer functionality
-          child: Icon(Icons.menu),
+          child: Icon(Icons.menu ,color: Colors.white,),
         ),
         actions: [
           Container(
