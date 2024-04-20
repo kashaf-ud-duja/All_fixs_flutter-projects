@@ -140,18 +140,33 @@ class DashBoard extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Flexible(
-                            child: Column(
-                          children: [
-                            Text(
-                              "Status",
-                              style: GoogleFonts.nunito(
-                                  fontSize: 12, fontWeight: FontWeight.w500,color: Colors.black),
-                            ),
-                            Text("data")
-                          ],
-                        )),
-                        Divider(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Flexible(
+                              child: Column(
+                            children: [
+                              Text(
+                                "Status",
+                                style: GoogleFonts.nunito(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                              Text(
+                                "Online",
+                                style: GoogleFonts.nunito(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green[500]),
+                              ),
+                            ],
+                          )),
+                        ),
+                        SizedBox(
+                          height: 40,
+                          width: 2,
+                          child: Container(color: Colors.black,),
+                        ),
                         Flexible(child: Column()),
                         Divider(),
                         Flexible(child: Column())
