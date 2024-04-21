@@ -8,16 +8,18 @@ import 'package:page_transition/page_transition.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
 import 'package:all_fixs/Views/Widgets/Auth/auth_text_field.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+
 class ProfileSetup extends StatefulWidget {
   const ProfileSetup({super.key});
   @override
   State<ProfileSetup> createState() => _ProfileSetupState();
 }
+
 class _ProfileSetupState extends State<ProfileSetup> {
   final RoundedLoadingButtonController _profileSetupbtnController =
       RoundedLoadingButtonController();
 
- bool ismale = true;
+  bool ismale = true;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +41,11 @@ class _ProfileSetupState extends State<ProfileSetup> {
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/2.png",),
-              filterQuality: FilterQuality.high,
-              fit: BoxFit.cover
-            ),
+                image: AssetImage(
+                  "assets/images/2.png",
+                ),
+                filterQuality: FilterQuality.high,
+                fit: BoxFit.cover),
           ),
           child: Column(children: [
             Container(
@@ -110,15 +113,14 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                       ismale =true;
+                      ismale = true;
                     });
-                   
                   },
                   child: Container(
                     height: 10.h,
                     width: 40.w,
                     decoration: BoxDecoration(
-                        color: ismale ?  Colors.blue :Colors.grey,
+                        color: ismale ? Colors.blue : Colors.grey,
                         shape: BoxShape.circle,
                         // ignore: prefer_const_literals_to_create_immutables
                         boxShadow: [
@@ -137,15 +139,14 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                      ismale =false;
+                      ismale = false;
                     });
-                    
                   },
                   child: Container(
                     height: 10.h,
                     width: 40.w,
                     decoration: BoxDecoration(
-                        color:!ismale? Colors.pink[300]:Colors.grey,
+                        color: !ismale ? Colors.pink[300] : Colors.grey,
                         shape: BoxShape.circle,
                         boxShadow: const [
                           BoxShadow(
@@ -157,7 +158,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                     child: const Icon(
                       Icons.female,
                       color: Colors.white,
-                      
                     ),
                   ),
                 ),
@@ -175,20 +175,23 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   onPressed: () {
                     Timer(Duration(seconds: 3), () {
                       _profileSetupbtnController.success();
-                       Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: InviteFriend()));
-                  });
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: InviteFriend()));
+                    });
                   },
                   child: Text(
                     "Next",
                     style: GoogleFonts.poppins(
-                        fontSize: 16.sp, fontWeight: FontWeight.bold),
+                        fontSize: 16.sp, fontWeight: FontWeight.bold,color: Colors.black),
                   ),
                   color: Colors.orange[900],
                   width: 2000.w,
                   borderRadius: 10,
                 ),
               ),
-              
             ),
             const SizedBox(
               height: 50,

@@ -74,6 +74,7 @@ class Register extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                   color: Colors.orange[900],

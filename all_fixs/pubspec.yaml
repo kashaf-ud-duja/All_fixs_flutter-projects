@@ -80,6 +80,14 @@ flutter:
     - assets/dashboard/chat.png
     - assets/dashboard/message.png
     - assets/dashboard/chatting.png
+    - assets/dashboard/blackgallery.png
+    - assets/dashboard/coloredgallery.png
+    - assets/dashboard/blacksmile.png
+    - assets/dashboard/coloredsmile.png
+    - assets/dashboard/phone (1).png
+    - assets/dashboard/phone.png
+    - assets/dashboard/smartphone.png
+    - assets/dashboard/mobile.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

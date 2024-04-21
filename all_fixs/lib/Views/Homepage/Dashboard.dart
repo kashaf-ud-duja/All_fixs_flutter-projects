@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:all_fixs/Views/Homepage/Dashboard/dashboard_gradient_feature.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +26,7 @@ class DashBoard extends StatelessWidget {
                   fontSize: 30),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -43,7 +46,7 @@ class DashBoard extends StatelessWidget {
             width: double.infinity,
             child: Card(
               elevation: 10,
-              color: Colors.grey[300],
+              color: Colors.grey[200],
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -105,7 +108,7 @@ class DashBoard extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Row(
@@ -134,7 +137,7 @@ class DashBoard extends StatelessWidget {
                         ))
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -163,19 +166,84 @@ class DashBoard extends StatelessWidget {
                           )),
                         ),
                         SizedBox(
-                          height: 40,
+                          height: 30,
                           width: 2,
-                          child: Container(color: Colors.black,),
+                          child: Container(
+                            color: Colors.grey,
+                          ),
                         ),
-                        Flexible(child: Column()),
-                        Divider(),
-                        Flexible(child: Column())
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Flexible(
+                              child: Column(
+                            children: [
+                              Text(
+                                "User Status",
+                                style: GoogleFonts.nunito(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                              Text(
+                                "N/A",
+                                style: GoogleFonts.nunito(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red[500]),
+                              ),
+                            ],
+                          )),
+                        ),
+                        SizedBox(
+                          height: 30,
+                          width: 2,
+                          child: Container(
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Flexible(
+                            child: Text(
+                              "Mood N/A",
+                              style: GoogleFonts.nunito(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),
+                          ),
+                        ),
                       ],
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                   ],
                 ),
               ),
             ),
+          ),
+          Row(
+            children: [
+              Flexible(
+                  child: DashboardGradientFeature(
+                Iconimage: "assets/dashboard/phone (1).png",
+                buttontext: "Device info",
+                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+              )),
+              Flexible(
+                  child: DashboardGradientFeature(
+                Iconimage: "assets/dashboard/phone (1).png",
+                buttontext: "Device info",
+                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+              )),
+              Flexible(
+                  child: DashboardGradientFeature(
+                Iconimage: "assets/dashboard/phone (1).png",
+                buttontext: "Device info",
+                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+              )),
+            ],
           )
         ],
       ),

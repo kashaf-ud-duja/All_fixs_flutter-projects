@@ -70,7 +70,7 @@ class logIn extends StatelessWidget {
                   },
                   child: Text(
                     "Login",
-                    style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold),
+                    style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black),
                   ),
                   color: Colors.orange[900],
                   width: 2000.w,
