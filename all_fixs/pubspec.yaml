@@ -88,6 +88,16 @@ flutter:
     - assets/dashboard/phone.png
     - assets/dashboard/smartphone.png
     - assets/dashboard/mobile.png
+    - assets/dashboard/placeholder.png
+    - assets/dashboard/location.png
+    - assets/dashboard/fast-forward.png
+    - assets/dashboard/foward.png
+    - assets/dashboard/horoscope.png
+    - assets/dashboard/todolist.png
+    - assets/dashboard/notes.png
+    - assets/dashboard/diary.png
+    - assets/dashboard/sos.png
+    - assets/dashboard/activity.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

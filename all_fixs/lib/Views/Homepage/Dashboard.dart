@@ -30,15 +30,15 @@ class DashBoard extends StatelessWidget {
             height: 10,
           ),
           Container(
-            padding: EdgeInsets.only(left: 25),
+            padding: EdgeInsets.symmetric(horizontal: 15),
             alignment: Alignment.centerLeft,
             child: Text(
               "Hired Fixians",
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.nunito(
                   color: Colors.black,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1),
             ),
           ),
           Container(
@@ -227,24 +227,165 @@ class DashBoard extends StatelessWidget {
             children: [
               Flexible(
                   child: DashboardGradientFeature(
-                Iconimage: "assets/dashboard/phone (1).png",
+                Iconimage: "assets/dashboard/phone.png",
                 buttontext: "Device info",
-                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+                clr: [
+                  const Color.fromRGBO(129, 199, 132, 1),
+                  Color.fromARGB(255, 56, 142, 60)
+                ],
               )),
               Flexible(
                   child: DashboardGradientFeature(
-                Iconimage: "assets/dashboard/phone (1).png",
-                buttontext: "Device info",
-                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+                Iconimage: "assets/dashboard/blackgallery.png",
+                buttontext: "Gallery",
+                clr: [Colors.yellow, const Color.fromRGBO(251, 192, 45, 1)],
               )),
               Flexible(
                   child: DashboardGradientFeature(
-                Iconimage: "assets/dashboard/phone (1).png",
-                buttontext: "Device info",
-                clr: [const Color.fromRGBO(230, 81, 0, 1), Colors.yellow],
+                Iconimage: "assets/dashboard/blacksmile.png",
+                buttontext: "Mood",
+                clr: [
+                  const Color.fromRGBO(186, 104, 200, 1),
+                  const Color.fromRGBO(106, 27, 154, 1)
+                ],
               )),
             ],
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Our Features",
+                textAlign: TextAlign.left,
+                style: GoogleFonts.nunito(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 20,
+                    color: Colors.black,
+                    letterSpacing: 1),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              children: [
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/fast-forward.png",
+                    buttontext: "Playlist",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/placeholder.png",
+                    buttontext: "Location",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              children: [
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/todolist.png",
+                    buttontext: "To Do List",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/diary.png",
+                    buttontext: "Diary",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              children: [
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/notes.png",
+                    buttontext: "Notes",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/horoscope.png",
+                    buttontext: "Horoscope",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              children: [
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/sos.png",
+                    buttontext: "Emergency SOS",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Flexible(
+                  child: DashboardGradientFeature(
+                    Iconimage: "assets/dashboard/activity.png",
+                    buttontext: "Activity",
+                    clr: [Colors.white, Colors.white],
+                    weight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20,)
         ],
       ),
     );
