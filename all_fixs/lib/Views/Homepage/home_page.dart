@@ -1,4 +1,5 @@
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
+import 'package:all_fixs/Views/Profile/profile.dart';
 import 'package:all_fixs/Views/Widgets/Homepage/drawer_list_tile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
@@ -41,9 +42,7 @@ class _HomePageState extends State<HomePage> {
         );
       },
       children: [
-        Container(
-          color: Colors.amber,
-        ),
+       Profile(),
         DashBoard(),
         Container(
           color: Colors.black,
