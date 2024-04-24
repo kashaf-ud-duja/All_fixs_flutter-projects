@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
 import 'package:all_fixs/Views/Homepage/home_page.dart';
+import 'package:all_fixs/Views/Profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:all_fixs/Views/Auth/Forget_Password.dart';
 import 'package:all_fixs/Views/Auth/Login.dart';
@@ -21,7 +22,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'ALL FIXS',
-              home: HomePage(),
+              home: Profile(),
               debugShowCheckedModeBanner: false,
             );
             }

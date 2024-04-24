@@ -67,16 +67,17 @@ class _ProfileSetupState extends State<ProfileSetup> {
             ),
             CircularProfileAvatar(
               '',
-              radius: 80,
+              radius: 50,
               backgroundColor: Colors.grey,
               borderWidth: 10,
               initialsText: Text(
                 "+",
                 style: GoogleFonts.poppins(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2,
-                    textStyle: const TextStyle(color: Colors.white)),
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  textStyle: const TextStyle(color: Colors.white),
+                ),
               ),
             ),
             const SizedBox(
@@ -185,7 +186,9 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   child: Text(
                     "Next",
                     style: GoogleFonts.poppins(
-                        fontSize: 16.sp, fontWeight: FontWeight.bold,color: Colors.black),
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                   color: Colors.orange[900],
                   width: 2000.w,
