@@ -1,5 +1,8 @@
+import "package:all_fixs/Views/Widgets/Auth/auth_text_field.dart";
+import "package:all_fixs/Views/Widgets/Homepage/card_detail_view.dart";
 import "package:circular_profile_avatar/circular_profile_avatar.dart";
 import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
 import "package:flutter_sizer/flutter_sizer.dart";
 import "package:google_fonts/google_fonts.dart";
 
@@ -40,10 +43,11 @@ class Profile extends StatelessWidget {
             initialsText: Text(
               "+",
               style: GoogleFonts.poppins(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                  textStyle: const TextStyle(color: Colors.white)),
+                fontSize: 16.sp,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+                textStyle: const TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ),
@@ -60,26 +64,48 @@ class Profile extends StatelessWidget {
           style: GoogleFonts.poppins(
               fontSize: 12, fontWeight: FontWeight.w500, color: Colors.grey),
         ),
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.grey[900]),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                minimumSize: MaterialStateProperty.all(Size(150, 50)),
-              ),
-              onPressed: () {},
-              child: Text(
-                "Edit Profile",
-                style: GoogleFonts.poppins(
-                  fontSize: 20.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
+          style: ButtonStyle(
+            side: MaterialStateProperty.all(
+              BorderSide(
+                color: const Color.fromRGBO(230, 81, 0, 1),
               ),
             ),
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            minimumSize: MaterialStateProperty.all(Size(150, 50)),
+          ),
+          onPressed: () {},
+          child: Text(
+            "Edit Profile Details",
+            style: GoogleFonts.poppins(
+              fontSize: 20.sp,
+              color: Colors.orange[900],
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          child: Column(
+            children: [
+              CardDetailView(
+                  clr: const Color.fromRGBO(230, 81, 0, 1),
+                  icons: Icon(Icons.alternate_email),
+                  type: "Email Address",
+                  value: "tahirkashaf@gmail.com")
+            ],
+          ),
+        )
       ],
     );
   }
