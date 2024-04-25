@@ -22,7 +22,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'ALL FIXS',
-              home: Profile(),
+              home: HomePage(),
               debugShowCheckedModeBanner: false,
             );
             }

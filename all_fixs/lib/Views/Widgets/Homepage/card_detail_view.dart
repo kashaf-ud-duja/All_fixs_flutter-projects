@@ -19,7 +19,7 @@ class CardDetailView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: clr,
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
@@ -52,7 +52,7 @@ class CardDetailView extends StatelessWidget {
                     style: GoogleFonts.nunito(
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
-                        color: null == "Value not currently set"
+                        color: value == "Value not currently set"
                         ? Colors.red
                         : Colors.black),
                   ),
