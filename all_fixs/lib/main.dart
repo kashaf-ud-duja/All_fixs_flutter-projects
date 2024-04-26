@@ -2,6 +2,7 @@
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
 import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:all_fixs/Views/Profile/profile.dart';
+import 'package:all_fixs/Views/Profile/profile_settings.dart';
 import 'package:all_fixs/Views/Widgets/Auth/splash_loader_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:all_fixs/Views/Auth/Forget_Password.dart';
@@ -23,7 +24,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'ALL FIXS',
-              home: SplashAnimator(),
+              home: ProfileSettings(),
               debugShowCheckedModeBanner: false,
             );
             }
