@@ -27,14 +27,14 @@ class logIn extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               new AuthHeading(
                 mainText: "Sign in to All Fixs",
                 subText: "your one stop solution",
                 logo: "assets/images/logo.png",
-                logoSize: 52.sp,
+                logoSize: 130,
                 fontSize: 15.sp,
               ),
               const SizedBox(

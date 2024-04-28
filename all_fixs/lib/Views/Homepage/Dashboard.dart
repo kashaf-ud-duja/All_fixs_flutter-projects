@@ -20,7 +20,7 @@ class DashBoard extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "Dashboard",
-              style: GoogleFonts.bodoniModa(
+              style: GoogleFonts.nunito(
                   color: Colors.orange[900],
                   fontWeight: FontWeight.bold,
                   fontSize: 30),

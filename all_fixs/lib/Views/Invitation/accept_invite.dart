@@ -10,7 +10,7 @@ class AcceptInvitation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(50),
         child: AppBar(
           elevation: 0,
           centerTitle: true,
