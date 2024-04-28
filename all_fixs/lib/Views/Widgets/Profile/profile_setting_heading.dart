@@ -8,7 +8,7 @@ class ProfileSettingHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 50),
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.center,
       child: Text(
         heading,
         textScaleFactor: 1,
