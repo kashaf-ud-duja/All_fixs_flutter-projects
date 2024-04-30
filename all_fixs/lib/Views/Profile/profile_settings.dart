@@ -139,8 +139,14 @@ class ProfileSettings extends StatelessWidget {
                                         color: Colors.red,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  SizedBox(width: 10,),
-                                  Icon(Icons.arrow_forward,size: 25,weight:900,),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward,
+                                    size: 25,
+                                    weight: 900,
+                                  ),
                                 ],
                               ),
                             ),
@@ -161,7 +167,7 @@ class ProfileSettings extends StatelessWidget {
                                 type: GFToggleType.android,
                               ),
                             ),
-                             const SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             ProfileSettingHeading(
@@ -179,12 +185,20 @@ class ProfileSettings extends StatelessWidget {
                                         color: Colors.red,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  SizedBox(width: 10,),
-                                  Icon(Icons.arrow_forward,size: 25,weight:900,),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward,
+                                    size: 25,
+                                    weight: 900,
+                                  ),
                                 ],
                               ),
                             ),
-                            SizedBox(height: 20,)
+                            SizedBox(
+                              height: 20,
+                            )
                           ],
                         ),
                       ),

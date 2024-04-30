@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:all_fixs/Views/Homepage/Dashboard/dashboard_gradient_feature.dart';
+import 'package:all_fixs/Views/Widgets/Dashboard/dashboard_gradient_feature.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
