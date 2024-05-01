@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class TopBanner extends StatelessWidget {
-  const TopBanner({
-    super.key,
-  });
+ final String title;
+ final List<Color> clr;
 
+TopBanner({required this.clr,required this.title});
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment:Alignment.center,
         height: 50,
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration:  BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFFFB74D), Color(0xFFFB8C00)],
+            colors: clr,
           ),
         ),
         child: Text(
           
-          "Device Info",
+          title,
           style: GoogleFonts.nunito(
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.bold,
               fontSize: 20,
-              color: Colors.black,
+              color: Colors.white,
               letterSpacing: 1),
         ));
   }
