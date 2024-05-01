@@ -1,5 +1,5 @@
 // ignore_for_file: unused_import
-import 'package:all_fixs/Views/Features/DeviceInfo/device_info.dart';
+import 'package:all_fixs/Views/Auth/Features/DeviceInfo/device_info.dart';
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
 import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:all_fixs/Views/Profile/profile.dart';
