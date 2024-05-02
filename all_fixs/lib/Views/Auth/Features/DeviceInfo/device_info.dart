@@ -1,3 +1,4 @@
+import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/gradient_button_container.dart';
 import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/top_banner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -43,35 +44,7 @@ class DeviceInfo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                        padding: EdgeInsets.all(10),
-                        child: Container(
-                          width: double.infinity,
-                          child: Card(
-                            elevation: 10,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                gradient:LinearGradient(colors: [Color(0xFF000000), Color(0xDD000000)]),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                        // Column(
-                        //   children: [
-                        //     Expanded(
-                        //         child: Container(
-                        //       color: Colors.black,
-                        //     )),
-                        //     Expanded(
-                        //         child: Container(
-                        //       color: Colors.pink,
-                        //     ))
-                        //   ],
-                        // ),
-                        ),
+                    child: GradientButtonContainer(),
                   ),
                   Expanded(
                       child: Container(
@@ -89,3 +62,4 @@ class DeviceInfo extends StatelessWidget {
     );
   }
 }
+
