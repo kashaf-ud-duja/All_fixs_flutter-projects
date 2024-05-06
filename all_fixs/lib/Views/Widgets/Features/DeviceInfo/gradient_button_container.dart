@@ -1,28 +1,37 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class GradientButtonContainer extends StatelessWidget {
-  const GradientButtonContainer({
-    super.key,
-  });
+final String Title;
+final List<Color> clr;
+final Color Overlayclr;
+final bool isgradientvertical;
+GradientButtonContainer({
+required this.Title,
+required this.Overlayclr,
+required this.clr,
+required this.isgradientvertical
+});
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
+    return Container(
         width: double.infinity,
         child: Container(
           color: Colors.purple,
           child: Card(
             elevation: 10,
             child: Container(
-              decoration: const BoxDecoration(
+              decoration:  BoxDecoration(
                 gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF86AAE8),
-                      Color(0xFF92E9E3)
-                    ]),
+                    begin: isgradientvertical ? Alignment.topCenter: Alignment.centerLeft,
+                    end:isgradientvertical ? Alignment.bottomCenter: Alignment.centerRight,
+                  
+                    colors: clr,
+                     
+                     
+                    ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(5),
                 ),
@@ -31,9 +40,10 @@ class GradientButtonContainer extends StatelessWidget {
                 style: ButtonStyle(
                     elevation:
                         MaterialStateProperty.all<double>(0),
+                        //overlay color is the color that will dispalyed pnce hover on the button.
                     overlayColor:
                         MaterialStateProperty.all<Color>(
-                            Colors.blue),
+                            Overlayclr),
                     padding: MaterialStateProperty.all<
                             EdgeInsetsGeometry>(
                         const EdgeInsets.all(0)),
@@ -46,7 +56,7 @@ class GradientButtonContainer extends StatelessWidget {
                       MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "User Status",
+                      Title,
                       style: GoogleFonts.nunito(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -58,7 +68,6 @@ class GradientButtonContainer extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

@@ -44,7 +44,12 @@ class DeviceInfo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: GradientButtonContainer(),
+                    child: GradientButtonContainer(
+                      Title: "Device Info",
+                      Overlayclr: const Color.fromRGBO(230, 81, 0, 1),
+                      clr: [Color(0xFF86AAE8), Color(0xFF92E9E3)],
+                      isgradientvertical: true,
+                    ),
                   ),
                   Expanded(
                       child: Container(
@@ -62,4 +67,3 @@ class DeviceInfo extends StatelessWidget {
     );
   }
 }
-
