@@ -44,30 +44,27 @@ class DeviceInfo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      color: Colors.transparent,
-                      child: Column(
-                        children: [
-                          Expanded(
-                            flex: 10,
-                            child: GradientButtonContainer(
-                              Title: "Device Info",
-                              Overlayclr: Colors.cyan,
-                              clr: [Color(0xFF86AAE8), Color(0xFF92E9E3)],
-                              isgradientvertical: true,
-                            ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          flex: 10,
+                          child: GradientButtonContainer(
+                            Title: "Device Info",
+                            Overlayclr: Colors.cyan,
+                            clr: [Color(0xFF86AAE8), Color(0xFF92E9E3)],
+                            isgradientvertical: true,
                           ),
-                          Expanded(
-                            flex: 6,
-                            child: GradientButtonContainer(
-                              Title: "Battery",
-                              Overlayclr: Colors.orangeAccent,
-                              clr: [Color(0xFFFAD585), Color(0xFFF47A7D)],
-                              isgradientvertical: true,
-                            ),
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: GradientButtonContainer(
+                            Title: "Battery",
+                            Overlayclr: Colors.orangeAccent,
+                            clr: [Color(0xFFFAD585), Color(0xFFF47A7D)],
+                            isgradientvertical: true,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   Expanded(
@@ -83,8 +80,45 @@ class DeviceInfo extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(color: Colors.amber),
-          ),
+              child: Container(
+                padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: GradientButtonContainer(
+                    Title: "Deice Specs",
+                    Overlayclr: Color(0XFF01BCAA),
+                    clr: [Color(0xFF02A9AF), Color(0xFF00CDAC)],
+                    isgradientvertical: false,
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Expanded(
+                        flex: 6,
+                        child: GradientButtonContainer(
+                          Title: "Location",
+                          Overlayclr: Color(0XFF8159C6),
+                          clr: [Color(0xFF8893D6), Color(0xFF8CA5DB)],
+                          isgradientvertical: false,
+                        ),
+                      ),
+                      Expanded(
+                        flex: 10,
+                        child: GradientButtonContainer(
+                          Title: "Orientation",
+                          Overlayclr: Color(0XFFF98583),
+                          clr: [Color(0xFFF27898), Color(0xFFFF9370)],
+                          isgradientvertical: true,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )),
         ],
       ),
     );
