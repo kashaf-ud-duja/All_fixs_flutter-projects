@@ -44,17 +44,40 @@ class DeviceInfo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: GradientButtonContainer(
-                      Title: "Device Info",
-                      Overlayclr: const Color.fromRGBO(230, 81, 0, 1),
-                      clr: [Color(0xFF86AAE8), Color(0xFF92E9E3)],
-                      isgradientvertical: true,
+                    child: Container(
+                      color: Colors.purple,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            flex: 10,
+                            child: GradientButtonContainer(
+                              Title: "Device Info",
+                              Overlayclr: Colors.cyan,
+                              clr: [Color(0xFF86AAE8), Color(0xFF92E9E3)],
+                              isgradientvertical: true,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 6,
+                            child: GradientButtonContainer(
+                              Title: "Battery",
+                              Overlayclr: Colors.orangeAccent,
+                              clr: [Color(0xFFFAD585), Color(0xFFF47A7D)],
+                              isgradientvertical: true,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
-                      child: Container(
-                    color: Colors.indigo,
-                  )),
+                    child: GradientButtonContainer(
+                      Title: "General",
+                      Overlayclr: Colors.teal.shade300,
+                      clr: [Color(0xFF8C9C2), Color(0xFF92E9E3)],
+                      isgradientvertical: false,
+                    ),
+                  ),
                 ],
               ),
             ),
