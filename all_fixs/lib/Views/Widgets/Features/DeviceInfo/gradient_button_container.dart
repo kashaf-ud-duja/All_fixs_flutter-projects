@@ -18,56 +18,58 @@ required this.isgradientvertical
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        child: Container(
-          color: Colors.purple,
-          child: Card(
-            elevation: 10,
-            child: Container(
-              decoration:  BoxDecoration(
-                gradient: LinearGradient(
-                    begin: isgradientvertical ? Alignment.topCenter: Alignment.centerLeft,
-                    end:isgradientvertical ? Alignment.bottomCenter: Alignment.centerRight,
-                  
-                    colors: clr,
-                     
-                     
-                    ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Card(
+              elevation: 10,
+              child: Container(
+                decoration:  BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: isgradientvertical ? Alignment.topCenter: Alignment.centerLeft,
+                      end:isgradientvertical ? Alignment.bottomCenter: Alignment.centerRight,
+                    
+                      colors: clr,
+                       
+                       
+                      ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
                 ),
-              ),
-              child: ElevatedButton(
-                style: ButtonStyle(
-                    elevation:
-                        MaterialStateProperty.all<double>(0),
-                        //overlay color is the color that will dispalyed pnce hover on the button.
-                    overlayColor:
-                        MaterialStateProperty.all<Color>(
-                            Overlayclr),
-                    padding: MaterialStateProperty.all<
-                            EdgeInsetsGeometry>(
-                        const EdgeInsets.all(0)),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(
-                            Colors.transparent)),
-                onPressed: () {},
-                child: Column(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      Title,
-                      style: GoogleFonts.nunito(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                  ],
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      elevation:
+                          MaterialStateProperty.all<double>(0),
+                          //overlay color is the color that will dispalyed pnce hover on the button.
+                        
+                      overlayColor:
+                          MaterialStateProperty.all<Color>(
+                              Overlayclr),
+                      padding: MaterialStateProperty.all<
+                              EdgeInsetsGeometry>(
+                          const EdgeInsets.all(0)),
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(
+                              Colors.transparent)),
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        Title,
+                        style: GoogleFonts.nunito(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
+  
     );
   }
 }

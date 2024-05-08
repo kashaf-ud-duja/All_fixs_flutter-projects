@@ -40,12 +40,12 @@ class DeviceInfo extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.all(10),
-              color: Colors.red,
+              color: Colors.transparent,
               child: Row(
                 children: [
                   Expanded(
                     child: Container(
-                      color: Colors.purple,
+                      color: Colors.transparent,
                       child: Column(
                         children: [
                           Expanded(
@@ -74,7 +74,7 @@ class DeviceInfo extends StatelessWidget {
                     child: GradientButtonContainer(
                       Title: "General",
                       Overlayclr: Colors.teal.shade300,
-                      clr: [Color(0xFF8C9C2), Color(0xFF92E9E3)],
+                      clr: [Color(0xFFC89C2), Color(0xFF95DEDA)],
                       isgradientvertical: false,
                     ),
                   ),
