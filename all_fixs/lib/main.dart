@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
-import 'package:all_fixs/Views/Auth/Features/DeviceInfo/device_info.dart';
+import 'package:all_fixs/Views/Features/DeviceInfo/UserStatus/user_status.dart';
+import 'package:all_fixs/Views/Features/DeviceInfo/device_info.dart';
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
 import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:all_fixs/Views/Profile/profile.dart';
@@ -25,7 +26,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'ALL FIXS',
-              home: DeviceInfo(),
+              home: UserStatus(),
               debugShowCheckedModeBanner: false,
             );
             }
