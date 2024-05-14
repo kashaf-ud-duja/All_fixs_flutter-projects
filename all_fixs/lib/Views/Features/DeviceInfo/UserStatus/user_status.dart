@@ -23,37 +23,50 @@ class UserStatus extends StatelessWidget {
           },
         ),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              color: Colors.blue[900],
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 50,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Text("Friend's Status",
-                      style: GoogleFonts.nunito(
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                        fontSize: 20,
+      body: Container(
+
+        decoration: BoxDecoration(
+          gradient: LinearGradient( colors: [Color(0xFFFAD585), Color(0xFFF47A7D),] 
+          )
+        ),
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.blue[900],
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Friend's Status",
+                          style: GoogleFonts.nunito(
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
                       ),
-                      textAlign: TextAlign.left,)
-                    ],
-                  ),
-                ],
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.orange[900],
+            Expanded(
+              child: Container(
+                color: Colors.orange[900],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
