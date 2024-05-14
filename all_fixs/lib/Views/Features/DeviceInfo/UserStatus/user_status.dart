@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserStatus extends StatelessWidget {
@@ -24,16 +25,19 @@ class UserStatus extends StatelessWidget {
         ),
       ),
       body: Container(
-
         decoration: BoxDecoration(
-          gradient: LinearGradient( colors: [Color(0xFFFAD585), Color(0xFFF47A7D),] 
-          )
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFFFAD585),
+              Color(0xFFF47A7D),
+            ],
+          ),
         ),
         child: Column(
           children: [
             Expanded(
               child: Container(
-                color: Colors.blue[900],
+                // color: Colors.blue[900],
                 child: Column(
                   children: [
                     SizedBox(
@@ -56,6 +60,34 @@ class UserStatus extends StatelessWidget {
                     SizedBox(
                       height: 50,
                     ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.purple,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Container(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(child: Container(
+                              color: Colors.yellow,
+                            ))
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
