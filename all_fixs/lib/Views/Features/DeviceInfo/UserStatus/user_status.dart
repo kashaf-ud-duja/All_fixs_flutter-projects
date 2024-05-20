@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+TwoValueCard({required String text, required String value}) {
+  
+}
 class UserStatus extends StatelessWidget {
   const UserStatus({super.key});
 
@@ -62,7 +66,7 @@ class UserStatus extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.purple,
+                        color: Colors.pink,
                         child: Row(
                           children: [
                             Expanded(
@@ -70,8 +74,9 @@ class UserStatus extends StatelessWidget {
                                 children: [
                                   Expanded(
                                     child: Container(
-                                      color: Colors.red,
-                                    ),
+                                        color: Colors.red,
+                                        child:TwoValueCard(text: "User is", value: "Online")
+                                         ),
                                   ),
                                   Expanded(
                                     child: Container(
@@ -81,7 +86,8 @@ class UserStatus extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Expanded(child: Container(
+                            Expanded(
+                                child: Container(
                               color: Colors.yellow,
                             ))
                           ],
@@ -102,4 +108,7 @@ class UserStatus extends StatelessWidget {
       ),
     );
   }
+}
+
+
 }
