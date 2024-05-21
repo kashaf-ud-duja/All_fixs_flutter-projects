@@ -18,7 +18,7 @@ class DeviceInfo extends StatelessWidget {
           "ALL FIXS",
           style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),

@@ -27,7 +27,6 @@ class UserStatus extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -73,7 +72,7 @@ class UserStatus extends StatelessWidget {
                                 children: [
                                   Expanded(
                                     child: Container(
-                                      color:Colors.transparent,
+                                      color: Colors.transparent,
                                       child: TwoValueCard(
                                         text: "User is",
                                         txtclr: Colors.orange[900],
@@ -102,12 +101,12 @@ class UserStatus extends StatelessWidget {
                                 child: Container(
                               color: Colors.transparent,
                               child: TwoValueCard(
-                                        text: "User Status",
-                                        txtclr: Colors.orange[900],
-                                        value: "Driving",
-                                        subwidget: null,
-                                        clr: null,
-                                      ),
+                                text: "User Status",
+                                txtclr: Colors.orange[900],
+                                value: "Driving",
+                                subwidget: null,
+                                clr: null,
+                              ),
                             ))
                           ],
                         ),
@@ -119,10 +118,24 @@ class UserStatus extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-width: double.infinity,
-decoration: BoxDecoration(
-  
-),
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50)),
+                ),
+                child: const Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text("My Status"),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],
