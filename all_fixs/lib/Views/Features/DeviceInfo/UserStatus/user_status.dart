@@ -1,12 +1,10 @@
+import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/two_value_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-TwoValueCard({required String text, required String value}) {
-  
-}
 class UserStatus extends StatelessWidget {
   const UserStatus({super.key});
 
@@ -18,7 +16,7 @@ class UserStatus extends StatelessWidget {
           "ALL FIXS",
           style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
@@ -29,6 +27,7 @@ class UserStatus extends StatelessWidget {
         ),
       ),
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -62,11 +61,11 @@ class UserStatus extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 20,
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.pink,
+                        color: Colors.transparent,
                         child: Row(
                           children: [
                             Expanded(
@@ -74,13 +73,26 @@ class UserStatus extends StatelessWidget {
                                 children: [
                                   Expanded(
                                     child: Container(
-                                        color: Colors.red,
-                                        child:TwoValueCard(text: "User is", value: "Online")
-                                         ),
+                                      color:Colors.transparent,
+                                      child: TwoValueCard(
+                                        text: "User is",
+                                        txtclr: Colors.orange[900],
+                                        value: "Online",
+                                        subwidget: null,
+                                        clr: null,
+                                      ),
+                                    ),
                                   ),
                                   Expanded(
                                     child: Container(
-                                      color: Colors.black,
+                                      color: Colors.transparent,
+                                      child: TwoValueCard(
+                                        text: "Last APP Action",
+                                        txtclr: Colors.orange[900],
+                                        value: "2 Minutes Ago",
+                                        subwidget: null,
+                                        clr: null,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -88,7 +100,14 @@ class UserStatus extends StatelessWidget {
                             ),
                             Expanded(
                                 child: Container(
-                              color: Colors.yellow,
+                              color: Colors.transparent,
+                              child: TwoValueCard(
+                                        text: "User Status",
+                                        txtclr: Colors.orange[900],
+                                        value: "Driving",
+                                        subwidget: null,
+                                        clr: null,
+                                      ),
                             ))
                           ],
                         ),
@@ -100,7 +119,10 @@ class UserStatus extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Colors.orange[900],
+width: double.infinity,
+decoration: BoxDecoration(
+  
+),
               ),
             ),
           ],
@@ -108,7 +130,4 @@ class UserStatus extends StatelessWidget {
       ),
     );
   }
-}
-
-
 }
