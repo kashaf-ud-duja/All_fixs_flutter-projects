@@ -25,7 +25,7 @@ class Allfixs extends StatelessWidget {
           return FlutterSizer(
             builder: (context, orientation, screenType) {
             return MaterialApp(
-              title: 'ALL FIXS',
+              title: 'All Fixs',
               home: UserStatus(),
               debugShowCheckedModeBanner: false,
             );

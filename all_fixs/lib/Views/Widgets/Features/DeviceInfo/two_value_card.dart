@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -49,6 +47,13 @@ class TwoValueCard extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
+                Expanded(
+                  child: ListView.builder(itemBuilder: (context, index) {
+                    return Container();
+                  
+                    
+                  }, ) ,
+                )
           ],
         ),
       ),

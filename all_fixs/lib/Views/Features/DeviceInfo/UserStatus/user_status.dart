@@ -1,6 +1,5 @@
 import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/two_value_card.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,15 +124,43 @@ class UserStatus extends StatelessWidget {
                       topLeft: Radius.circular(50),
                       topRight: Radius.circular(50)),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
+                    SizedBox(height: 20,),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Align(
                         alignment: Alignment.center,
-                        child: Text("My Status"),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "My Status is",
+                              style: GoogleFonts.nunito(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 18,
+                              ),
+                            ),
+                            SizedBox(
+                              width:5 ,
+                            ),
+                            Text(
+                              "Eating",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.nunito(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 18,
+                                color: Colors.orange[900],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                              width:5 ,
+                            ),
+                            
                   ],
                 ),
               ),
