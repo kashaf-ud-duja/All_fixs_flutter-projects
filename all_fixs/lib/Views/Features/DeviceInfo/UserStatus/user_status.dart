@@ -126,7 +126,9 @@ class UserStatus extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(height: 20,),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Align(
@@ -142,7 +144,7 @@ class UserStatus extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width:5 ,
+                              width: 5,
                             ),
                             Text(
                               "Eating",
@@ -158,9 +160,49 @@ class UserStatus extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                              width:5 ,
-                            ),
-                            
+                      width: 5,
+                    ),
+                    Expanded(
+                        child: ListView.builder(
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return Column(
+                          children: [
+                            Container(
+                              height: 160,
+                              width: 160,
+                              child: Card(
+                                elevation: 10,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "text",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.nunito(
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 2,
+                                    ),
+                                    Text(
+                                      "value",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.nunito(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        );
+                      },
+                    ))
                   ],
                 ),
               ),

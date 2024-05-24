@@ -47,13 +47,6 @@ class TwoValueCard extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                Expanded(
-                  child: ListView.builder(itemBuilder: (context, index) {
-                    return Container();
-                  
-                    
-                  }, ) ,
-                )
           ],
         ),
       ),

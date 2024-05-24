@@ -26,7 +26,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'All Fixs',
-              home: UserStatus(),
+              home: logIn(),
               debugShowCheckedModeBanner: false,
             );
             }
