@@ -34,12 +34,35 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var {flutter_service_worker_version} = null;
-  </script>
+    // var flutter_service_worker_version  = null;
+    var serviceWorkerVersion = 'flutter_service_worker_version';
+</script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      if (typeof _flutter === 'undefined') {
+        console.error('flutter.js is not loaded');
+        return;
+      }
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      }).catch(function(err) {
+        console.error('Failed to initialize Flutter app', err);
+      });
+    });
+  </script>
+</body>
+<!-- <body>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -54,5 +77,5 @@
       });
     });
   </script>
-</body>
+</body> -->
 </html>

@@ -1,11 +1,32 @@
+import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/one_value_card.dart';
 import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/two_value_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class UserStatus extends StatelessWidget {
-  const UserStatus({super.key});
+class UserStatus extends StatefulWidget {
+  @override
+  State<UserStatus> createState() => _UserStatusState();
+}
+
+class _UserStatusState extends State<UserStatus> {
+  List<String> Status1 = [
+    "Away",
+    "Don't Disturb",
+    "Driving",
+    "Eating",
+  ];
+
+  List<String> Status2 = [
+    "Meeting", 
+    "Outdoors", 
+    "Sleeping", 
+    "Working",
+    ];
+String selectedStatus = "Away";
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -160,45 +181,37 @@ class UserStatus extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 5,
+                      width: 50,
                     ),
                     Expanded(
                         child: ListView.builder(
-                      itemCount: 3,
+                      itemCount: Status1.length,
+                      scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Column(
                           children: [
-                            Container(
-                              height: 160,
-                              width: 160,
-                              child: Card(
-                                elevation: 10,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "text",
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.nunito(
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 2,
-                                    ),
-                                    Text(
-                                      "value",
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.nunito(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                            GestureDetector(
+                              onTap:() {
+                                setState(() {
+                                  selectedStatus = Status1[index];
+                                });
+                              },
+                              child: OneValueCard(
+                                value: Status1[index],
+                                clr: selectedStatus == Status1[index] ?  Color.fromRGBO(230, 81, 0, 1) :  Color(0xFFFAD585),
                               ),
-                            )
+                            ),
+                            GestureDetector(
+                              onTap:() {
+                                setState(() {
+                                  selectedStatus = Status2[index];
+                                });
+                              },
+                              child: OneValueCard(
+                                value: Status2[index],
+                                clr:selectedStatus == Status2[index] ? Color.fromRGBO(230, 81, 0, 1) :  Color(0xFFFAD585),
+                              ),
+                            ),
                           ],
                         );
                       },
