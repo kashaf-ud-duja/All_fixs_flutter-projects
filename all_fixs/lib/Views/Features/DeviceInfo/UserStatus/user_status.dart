@@ -19,14 +19,12 @@ class _UserStatusState extends State<UserStatus> {
   ];
 
   List<String> Status2 = [
-    "Meeting", 
-    "Outdoors", 
-    "Sleeping", 
+    "Meeting",
+    "Outdoors",
+    "Sleeping",
     "Working",
-    ];
-String selectedStatus = "Away";
-
-
+  ];
+  String selectedStatus = "Away";
 
   @override
   Widget build(BuildContext context) {
@@ -46,181 +44,188 @@ String selectedStatus = "Away";
           },
         ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFFAD585),
-              Color(0xFFF47A7D),
-            ],
+      body: SingleChildScrollView(
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFFFAD585),
+                Color(0xFFF47A7D),
+              ],
+            ),
           ),
-        ),
-        child: Column(
-          children: [
-            Expanded(
-              child: Container(
-                // color: Colors.blue[900],
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 50,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Friend's Status",
-                          style: GoogleFonts.nunito(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            fontSize: 20,
+          child: Column(
+            children: [
+              Expanded(
+                child: Container(
+                  // color: Colors.blue[900],
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 50,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Friend's Status",
+                            style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.transparent,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Expanded(
-                                    child: Container(
-                                      color: Colors.transparent,
-                                      child: TwoValueCard(
-                                        text: "User is",
-                                        txtclr: Colors.orange[900],
-                                        value: "Online",
-                                        subwidget: null,
-                                        clr: null,
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Expanded(
+                        child: Container(
+                          color: Colors.transparent,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        color: Colors.transparent,
+                                        child: TwoValueCard(
+                                          text: "User is",
+                                          txtclr: Colors.orange[900],
+                                          value: "Online",
+                                          subwidget: null,
+                                          clr: null,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      color: Colors.transparent,
-                                      child: TwoValueCard(
-                                        text: "Last APP Action",
-                                        txtclr: Colors.orange[900],
-                                        value: "2 Minutes Ago",
-                                        subwidget: null,
-                                        clr: null,
+                                    Expanded(
+                                      child: Container(
+                                        color: Colors.transparent,
+                                        child: TwoValueCard(
+                                          text: "Last APP Action",
+                                          txtclr: Colors.orange[900],
+                                          value: "2 Minutes Ago",
+                                          subwidget: null,
+                                          clr: null,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                            Expanded(
-                                child: Container(
-                              color: Colors.transparent,
-                              child: TwoValueCard(
-                                text: "User Status",
-                                txtclr: Colors.orange[900],
-                                value: "Driving",
-                                subwidget: null,
-                                clr: null,
-                              ),
-                            ))
-                          ],
+                              Expanded(
+                                  child: Container(
+                                color: Colors.transparent,
+                                child: TwoValueCard(
+                                  text: "User Status",
+                                  txtclr: Colors.orange[900],
+                                  value: "Driving",
+                                  subwidget: null,
+                                  clr: null,
+                                ),
+                              ))
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50),
-                      topRight: Radius.circular(50)),
-                ),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "My Status is",
-                              style: GoogleFonts.nunito(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 18,
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50)),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "My Status is",
+                                style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 18,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              "Eating",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.nunito(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 18,
-                                color: Colors.orange[900],
+                              SizedBox(
+                                width: 5,
                               ),
-                            ),
-                          ],
+                              Text(
+                                "Eating",
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 18,
+                                  color: Colors.orange[900],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 50,
-                    ),
-                    Expanded(
-                        child: ListView.builder(
-                      itemCount: Status1.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            GestureDetector(
-                              onTap:() {
-                                setState(() {
-                                  selectedStatus = Status1[index];
-                                });
-                              },
-                              child: OneValueCard(
-                                value: Status1[index],
-                                clr: selectedStatus == Status1[index] ?  Color.fromRGBO(230, 81, 0, 1) :  Color(0xFFFAD585),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Expanded(
+                          child: ListView.builder(
+                        itemCount: Status1.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    selectedStatus = Status1[index];
+                                  });
+                                },
+                                child: OneValueCard(
+                                  value: Status1[index],
+                                  clr: selectedStatus == Status1[index]
+                                      ? Color.fromRGBO(230, 81, 0, 1)
+                                      : Color(0xFFFAD585),
+                                ),
                               ),
-                            ),
-                            GestureDetector(
-                              onTap:() {
-                                setState(() {
-                                  selectedStatus = Status2[index];
-                                });
-                              },
-                              child: OneValueCard(
-                                value: Status2[index],
-                                clr:selectedStatus == Status2[index] ? Color.fromRGBO(230, 81, 0, 1) :  Color(0xFFFAD585),
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    selectedStatus = Status2[index];
+                                  });
+                                },
+                                child: OneValueCard(
+                                  value: Status2[index],
+                                  clr: selectedStatus == Status2[index]
+                                      ? Color.fromRGBO(230, 81, 0, 1)
+                                      : Color(0xFFFAD585),
+                                ),
                               ),
-                            ),
-                          ],
-                        );
-                      },
-                    ))
-                  ],
+                            ],
+                          );
+                        },
+                      ))
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
