@@ -5,7 +5,8 @@ final String txt;
 final String value;
 final Widget? subWidget;
 final Color? clr;
-BatteryInfoTwoValueCard({required this.txt,required this.value,required this.subWidget,required this.clr});
+final Color? txtclr;
+BatteryInfoTwoValueCard({required this.txt,required this.value,required this.subWidget,required this.clr,required this.txtclr});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ BatteryInfoTwoValueCard({required this.txt,required this.value,required this.sub
                   style: GoogleFonts.nunito(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
-                    color: Colors.red,
+                    color:txtclr ?? Colors.orange[900],
                   ),
                 ),
               ],

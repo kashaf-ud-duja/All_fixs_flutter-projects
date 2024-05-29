@@ -26,7 +26,8 @@ class BatteryInfo extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
+          // height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height * 1.2,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -71,17 +72,19 @@ class BatteryInfo extends StatelessWidget {
                                   child: BatteryInfoTwoValueCard(
                                 txt: 'Status',
                                 value: 'Discharge',
-                                subWidget: null, clr: null,
+                                subWidget: null,
+                                clr: null,
+                                txtclr: null,
                               )),
                               Expanded(
-                                  child: BatteryInfoTwoValueCard(
-                                txt: 'Charging Type',
-                                value: '-',
-                                subWidget: null, clr: null,
-                              )),
-                              Container(
-                                color: Colors.transparent,
-                              )
+                                child: BatteryInfoTwoValueCard(
+                                  txt: 'Charging Type',
+                                  value: '-',
+                                  subWidget: null,
+                                  clr: null,
+                                  txtclr: null,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -111,14 +114,18 @@ class BatteryInfo extends StatelessWidget {
                                         customWidths: CustomSliderWidths(
                                             progressBarWidth: 10)),
                                     initialValue: 80,
-                                  ), clr: null,
+                                  ),
+                                  clr: null,
+                                  txtclr: null,
                                 ),
                               ),
                               Expanded(
                                 child: BatteryInfoTwoValueCard(
                                   txt: 'Temperature',
                                   value: '35.0',
-                                  subWidget: null, clr: null,
+                                  subWidget: null,
+                                  clr: null,
+                                  txtclr: null,
                                 ),
                               ),
                             ],
@@ -134,13 +141,17 @@ class BatteryInfo extends StatelessWidget {
                                   child: BatteryInfoTwoValueCard(
                                 txt: 'Battery Health',
                                 value: 'Good',
-                                subWidget: null, clr: null,
+                                subWidget: null,
+                                clr: null,
+                                txtclr: null,
                               )),
                               Expanded(
                                 child: BatteryInfoTwoValueCard(
                                   txt: 'Battery Technology',
                                   value: 'li-poly',
-                                  subWidget: null, clr: null,
+                                  subWidget: null,
+                                  clr: null,
+                                  txtclr: null,
                                 ),
                               ),
                             ],
@@ -177,13 +188,14 @@ class BatteryInfo extends StatelessWidget {
                             style: GoogleFonts.nunito(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
+                              color: Colors.grey[700],
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      // SizedBox(
+                      //   height: 20,
+                      // ),
                       Expanded(
                         child: Container(
                           // color: Colors.transparent,
@@ -198,13 +210,17 @@ class BatteryInfo extends StatelessWidget {
                                           child: BatteryInfoTwoValueCard(
                                         txt: 'Status',
                                         value: 'Discharge',
-                                        subWidget: null, clr: Color(0xFFF47A7D),
+                                        subWidget: null,
+                                        clr: Color(0xFFF47A7D),
+                                        txtclr: Colors.white,
                                       )),
                                       Expanded(
                                         child: BatteryInfoTwoValueCard(
                                           txt: 'Charging Type',
                                           value: '-',
-                                          subWidget: null, clr: Color(0xFFF47A7D),
+                                          subWidget: null,
+                                          clr: Color(0xFFF47A7D),
+                                          txtclr: Colors.white,
                                         ),
                                       ),
                                     ],
@@ -228,7 +244,7 @@ class BatteryInfo extends StatelessWidget {
                                                 CircularSliderAppearance(
                                               customColors: CustomSliderColors(
                                                   progressBarColor:
-                                                      Colors.orange[900]),
+                                                      Colors.white),
                                               infoProperties: InfoProperties(
                                                 mainLabelStyle:
                                                     GoogleFonts.nunito(
@@ -240,14 +256,18 @@ class BatteryInfo extends StatelessWidget {
                                                   progressBarWidth: 10),
                                             ),
                                             initialValue: 80,
-                                          ), clr: Color(0xFFF47A7D),
+                                          ),
+                                          clr: Color(0xFFF47A7D),
+                                          txtclr: Colors.white,
                                         ),
                                       ),
                                       Expanded(
                                         child: BatteryInfoTwoValueCard(
                                           txt: 'Temperature',
                                           value: '35.0',
-                                          subWidget: null, clr: Color(0xFFF47A7D),
+                                          subWidget: null,
+                                          clr: Color(0xFFF47A7D),
+                                          txtclr: Colors.white,
                                         ),
                                       ),
                                     ],
@@ -263,13 +283,17 @@ class BatteryInfo extends StatelessWidget {
                                           child: BatteryInfoTwoValueCard(
                                         txt: 'Battery Health',
                                         value: 'Good',
-                                        subWidget: null, clr: Color(0xFFF47A7D),
+                                        subWidget: null,
+                                        clr: Color(0xFFF47A7D),
+                                        txtclr: Colors.white,
                                       )),
                                       Expanded(
                                         child: BatteryInfoTwoValueCard(
                                           txt: 'Battery Technology',
                                           value: 'li-poly',
-                                          subWidget: null, clr: Color(0xFFF47A7D),
+                                          subWidget: null,
+                                          clr: Color(0xFFF47A7D),
+                                          txtclr: Colors.white,
                                         ),
                                       ),
                                     ],
@@ -279,6 +303,9 @@ class BatteryInfo extends StatelessWidget {
                             ],
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 30,
                       ),
                     ],
                   ),
