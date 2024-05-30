@@ -46,13 +46,13 @@ class _UserStatusState extends State<UserStatus> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height * 1.2,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color(0xFFFAD585),
-                Color(0xFFF47A7D),
-              ],
+                colors: [
+              Color(0xFFFFA726),
+              Color(0xFFE65100),
+            ],
             ),
           ),
           child: Column(
@@ -63,7 +63,7 @@ class _UserStatusState extends State<UserStatus> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 50,
+                        height: 20,
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -200,7 +200,7 @@ class _UserStatusState extends State<UserStatus> {
                                   value: Status1[index],
                                   clr: selectedStatus == Status1[index]
                                       ? Color.fromRGBO(230, 81, 0, 1)
-                                      : Color(0xFFFAD585),
+                                      : Color(0xFFFFA726), txtclr: null,
                                 ),
                               ),
                               GestureDetector(
@@ -213,7 +213,7 @@ class _UserStatusState extends State<UserStatus> {
                                   value: Status2[index],
                                   clr: selectedStatus == Status2[index]
                                       ? Color.fromRGBO(230, 81, 0, 1)
-                                      : Color(0xFFFAD585),
+                                      : Color(0xFFFFA726), txtclr: null,
                                 ),
                               ),
                             ],

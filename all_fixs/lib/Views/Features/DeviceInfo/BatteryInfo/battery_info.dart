@@ -30,10 +30,10 @@ class BatteryInfo extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 1.2,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color(0xFFFAD585),
-                Color(0xFFF47A7D),
-              ],
+               colors: [
+              Color(0xFFFFA726),
+              Color(0xFFE65100),
+            ],
             ),
           ),
           child: Column(
@@ -211,7 +211,7 @@ class BatteryInfo extends StatelessWidget {
                                         txt: 'Status',
                                         value: 'Discharge',
                                         subWidget: null,
-                                        clr: Color(0xFFF47A7D),
+                                        clr: Color(0xFFE65100),
                                         txtclr: Colors.white,
                                       )),
                                       Expanded(
@@ -219,7 +219,7 @@ class BatteryInfo extends StatelessWidget {
                                           txt: 'Charging Type',
                                           value: '-',
                                           subWidget: null,
-                                          clr: Color(0xFFF47A7D),
+                                          clr: Color(0xFFE65100),
                                           txtclr: Colors.white,
                                         ),
                                       ),
@@ -257,7 +257,7 @@ class BatteryInfo extends StatelessWidget {
                                             ),
                                             initialValue: 80,
                                           ),
-                                          clr: Color(0xFFF47A7D),
+                                          clr: Color(0xFFE65100),
                                           txtclr: Colors.white,
                                         ),
                                       ),
@@ -266,7 +266,7 @@ class BatteryInfo extends StatelessWidget {
                                           txt: 'Temperature',
                                           value: '35.0',
                                           subWidget: null,
-                                          clr: Color(0xFFF47A7D),
+                                          clr: Color(0xFFE65100),
                                           txtclr: Colors.white,
                                         ),
                                       ),
@@ -284,7 +284,7 @@ class BatteryInfo extends StatelessWidget {
                                         txt: 'Battery Health',
                                         value: 'Good',
                                         subWidget: null,
-                                        clr: Color(0xFFF47A7D),
+                                        clr: Color(0xFFE65100),
                                         txtclr: Colors.white,
                                       )),
                                       Expanded(
@@ -292,7 +292,7 @@ class BatteryInfo extends StatelessWidget {
                                           txt: 'Battery Technology',
                                           value: 'li-poly',
                                           subWidget: null,
-                                          clr: Color(0xFFF47A7D),
+                                          clr: Color(0xFFE65100),
                                           txtclr: Colors.white,
                                         ),
                                       ),

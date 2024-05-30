@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 import 'package:all_fixs/Views/Features/DeviceInfo/BatteryInfo/battery_info.dart';
+import 'package:all_fixs/Views/Features/DeviceInfo/Location/location_info.dart';
 import 'package:all_fixs/Views/Features/DeviceInfo/UserStatus/user_status.dart';
 import 'package:all_fixs/Views/Features/DeviceInfo/device_info.dart';
 import 'package:all_fixs/Views/Homepage/Dashboard.dart';
@@ -27,7 +28,7 @@ class Allfixs extends StatelessWidget {
             builder: (context, orientation, screenType) {
             return MaterialApp(
               title: 'All Fixs',
-              home: BatteryInfo(),
+              home: LocationInfo(),
               debugShowCheckedModeBanner: false,
             );
             }
