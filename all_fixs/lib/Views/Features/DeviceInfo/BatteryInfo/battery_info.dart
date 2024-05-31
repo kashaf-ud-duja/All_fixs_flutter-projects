@@ -1,4 +1,4 @@
-import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/Battery%20Info/two_value_card.dart';
+import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/Battery%20Info/two_value_card_battery_info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';

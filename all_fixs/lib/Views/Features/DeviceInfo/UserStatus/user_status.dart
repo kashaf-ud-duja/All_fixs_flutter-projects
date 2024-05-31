@@ -1,4 +1,4 @@
-import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/one_value_card.dart';
+import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/User%20Info/one_value_card.dart';
 import 'package:all_fixs/Views/Widgets/Features/DeviceInfo/two_value_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
