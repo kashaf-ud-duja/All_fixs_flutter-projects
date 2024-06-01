@@ -32,6 +32,7 @@ class TwoValueCard extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.nunito(
                 fontWeight: FontWeight.bold,
+                color: Colors.black
               ),
             ),
             SizedBox(

@@ -28,7 +28,7 @@ class DeviceInfo extends StatelessWidget {
           },
         ),
       ),
-      body: Column(
+      body:Column(
         children: [
           TopBanner(
             clr: [Color(0xFF000000), Color(0xDD000000)],
@@ -60,7 +60,10 @@ class DeviceInfo extends StatelessWidget {
                           child: GradientButtonContainer(
                             Title: "Battery",
                             Overlayclr: Colors.orangeAccent,
-                            clr: [Color(0xFFFAD585), Color(0xFFF47A7D)],
+                            clr: [
+                              Color(0xFFFFA726),
+                              Color(0xFFE65100),
+                            ],
                             isgradientvertical: true,
                           ),
                         ),
@@ -81,7 +84,7 @@ class DeviceInfo extends StatelessWidget {
           ),
           Expanded(
               child: Container(
-                padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
             child: Row(
               children: [
                 Expanded(
@@ -108,8 +111,11 @@ class DeviceInfo extends StatelessWidget {
                         flex: 10,
                         child: GradientButtonContainer(
                           Title: "Orientation",
-                          Overlayclr: Color(0XFFF98583),
-                          clr: [Color(0xFFF27898), Color(0xFFFF9370)],
+                          Overlayclr: Color(0xFFE65100),
+                          clr: [
+                            Color(0xFFFFA726),
+                            Color(0xFFE65100),
+                          ],
                           isgradientvertical: true,
                         ),
                       ),

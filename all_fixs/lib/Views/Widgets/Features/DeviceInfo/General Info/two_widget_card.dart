@@ -5,30 +5,27 @@ class TwoWidgetCard extends StatelessWidget {
   final String txt1;
   final String value1;
   final Widget? subWidget1;
-  final Color? txtclr1;
-  final Color? valueclr1;
+  final Color? txtclr;
+  final Color? valueclr;
 
   final Color? cardclr;
 
   final String txt2;
-  final Color? txtclr2;
   final String value2;
-  final Color? valueclr2;
   final Widget? subWidget2;
 
   TwoWidgetCard({
     required this.txt1,
     required this.value1,
     required this.subWidget1,
-    required this.txtclr1,
-    required this.valueclr1,
 
     required this.cardclr,
-
+required this.txtclr,
+ required this.valueclr,
     required this.txt2,
-    required this.txtclr2,
+    
     required this.value2,
-    required this.valueclr2,
+   
     required this.subWidget2,
   });
 
@@ -55,7 +52,7 @@ class TwoWidgetCard extends StatelessWidget {
                         style: GoogleFonts.nunito(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
-                          color: txtclr1 ?? Colors.black,
+                          color: txtclr ?? Colors.black,
                         ),
                       ),
                       SizedBox(
@@ -68,7 +65,7 @@ class TwoWidgetCard extends StatelessWidget {
                             style: GoogleFonts.nunito(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
-                              color: valueclr1 ?? Colors.orange[900],
+                              color: valueclr ?? Colors.orange[900],
                             ),
                           ),
                       SizedBox(
@@ -80,7 +77,7 @@ class TwoWidgetCard extends StatelessWidget {
                         style: GoogleFonts.nunito(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
-                          color: txtclr2 ?? Colors.black,
+                          color: txtclr ?? Colors.black,
                         ),
                       ),
                       SizedBox(
@@ -93,7 +90,7 @@ class TwoWidgetCard extends StatelessWidget {
                             style: GoogleFonts.nunito(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
-                              color: valueclr2 ?? Colors.orange[900],
+                              color: valueclr ?? Colors.orange[900],
                             ),
                           ),
                     ],

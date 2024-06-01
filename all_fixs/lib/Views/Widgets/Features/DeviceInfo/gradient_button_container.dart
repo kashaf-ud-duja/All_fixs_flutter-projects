@@ -27,29 +27,26 @@ required this.isgradientvertical
                   gradient: LinearGradient(
                       begin: isgradientvertical ? Alignment.topCenter: Alignment.centerLeft,
                       end:isgradientvertical ? Alignment.bottomCenter: Alignment.centerRight,
-                    
                       colors: clr,
-                       
-                       
                       ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5),
-                  ),
+                  // borderRadius: BorderRadius.all(
+                  //   Radius.circular(5),
+                  // ),
                 ),
                 child: ElevatedButton(
                   style: ButtonStyle(
                       elevation:
-                          MaterialStateProperty.all<double>(0),
+                          WidgetStateProperty.all<double>(0),
                           //overlay color is the color that will dispalyed pnce hover on the button.
                         
                       overlayColor:
-                          MaterialStateProperty.all<Color>(
+                          WidgetStateProperty.all<Color>(
                               Overlayclr),
-                      padding: MaterialStateProperty.all<
+                      padding:WidgetStateProperty.all<
                               EdgeInsetsGeometry>(
                           const EdgeInsets.all(0)),
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(
+                          WidgetStateProperty.all<Color>(
                               Colors.transparent)),
                   onPressed: () {},
                   child: Column(
