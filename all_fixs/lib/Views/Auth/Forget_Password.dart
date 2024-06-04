@@ -1,3 +1,4 @@
+import 'package:all_fixs/Interfaces/Auth/forgot_pasword_services.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
@@ -9,15 +10,29 @@ import 'package:flutter_sizer/flutter_sizer.dart';
 class ForgetPassword extends StatelessWidget {
   final RoundedLoadingButtonController _forgetpasswordbtnController =
       RoundedLoadingButtonController();
+      final ForgotPaswordServices forgotpaswordservices = ForgotPaswordServices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "ALL FIXS",
-          style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        // backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color(0xFFFFA726),
+                Color(0xFFE65100),
+              ],
+            ),
+          ),
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -46,7 +61,7 @@ class ForgetPassword extends StatelessWidget {
                   obscureText: false,
                   fontSize: 20.sp,
                   iconsize: 12.sp,
-                  labelSize: 12.sp),
+                  labelSize: 12.sp, controller: forgotpaswordservices.emailcontroller,),
                   const SizedBox(
                 height: 30,
               ),

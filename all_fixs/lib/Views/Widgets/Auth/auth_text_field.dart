@@ -9,6 +9,7 @@ class AuthTextField extends StatelessWidget {
   final double labelSize;
   final double fontSize;
   final double iconsize;
+  final TextEditingController controller;
   AuthTextField(
       {required this.icon,
       required this.keyboardType,
@@ -16,10 +17,12 @@ class AuthTextField extends StatelessWidget {
       required this.obscureText,
       required this.fontSize,
       required this.iconsize,
-      required this.labelSize});
+      required this.labelSize,
+      required this.controller});
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
         textAlign: TextAlign.start,
         textInputAction: TextInputAction.none,
         obscureText: obscureText,

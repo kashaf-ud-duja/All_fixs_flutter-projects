@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:all_fixs/Controller/User%20Controller/user_controller.dart';
+import 'package:all_fixs/Interfaces/Auth/login_services.dart';
 import 'package:all_fixs/Views/Auth/Forget_Password.dart';
 import 'package:all_fixs/Views/Auth/Register.dart';
 import 'package:all_fixs/Views/Profile/profile_setup.dart';
@@ -13,16 +15,29 @@ import 'package:flutter_sizer/flutter_sizer.dart';
 class logIn extends StatelessWidget {
   final RoundedLoadingButtonController _loginbtnController =
       RoundedLoadingButtonController();
-
+final LoginServices loginservices = LoginServices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "ALL FIXS",
-          style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        // backgroundColor: Color.fromRGBO(230, 81, 0, 1),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color(0xFFFFA726),
+                Color(0xFFE65100),
+              ],
+            ),
+          ),
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -47,7 +62,7 @@ class logIn extends StatelessWidget {
                   obscureText: false,
                   fontSize: 16.sp,
                   iconsize: 16.sp,
-                  labelSize: 16.sp),
+                  labelSize: 16.sp, controller: loginservices.emailcontroller,),
               const SizedBox(height: 15),
               AuthTextField(
                   icon: Icons.password_outlined,
@@ -56,21 +71,29 @@ class logIn extends StatelessWidget {
                   obscureText: true,
                   fontSize: 16.sp,
                   iconsize: 16.sp,
-                  labelSize: 16.sp),
+                  labelSize: 16.sp, controller:  loginservices.passwordcontroller,),
               const SizedBox(height: 15),
               Hero(
                 tag: "Auth",
                 child: RoundedLoadingButton(
                   controller: _loginbtnController,
                   onPressed: () {
+                    UserController().loginUser(loginservices.emailcontroller.text, loginservices.passwordcontroller.text);
                     Timer(Duration(seconds: 3), () {
                       _loginbtnController.success();
-                       Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ProfileSetup()));
-                  });
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: ProfileSetup()));
+                    });
                   },
                   child: Text(
                     "Login",
-                    style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black),
+                    style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                   color: Colors.orange[900],
                   width: 2000.w,
@@ -82,12 +105,16 @@ class logIn extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ForgetPassword()));
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: ForgetPassword()));
                     },
                     child: Text(
                       "Forget Password?",
-                      style:
-                          GoogleFonts.poppins(fontSize: 12, color:  Colors.red[700]),
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, color: Colors.red[700]),
                     ),
                   )),
               const SizedBox(height: 25),
@@ -98,8 +125,12 @@ class logIn extends StatelessWidget {
                       style: GoogleFonts.poppins(
                           fontSize: 12, color: Colors.black87)),
                   GestureDetector(
-                    onTap: (){
-                      Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.fade, child: Register()));
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: Register()));
                     },
                     child: Text("Sign up",
                         style: GoogleFonts.poppins(

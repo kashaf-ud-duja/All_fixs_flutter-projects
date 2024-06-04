@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "140559833535",
+    "project_id": "allfixsapp",
+    "storage_bucket": "allfixsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140559833535:android:9aa5b351b5da40f0d5e90a",
+        "android_client_info": {
+          "package_name": "com.example.all_fixs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXjsSTHBtA2vszAxFC2J7yKT3hX-6U6gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

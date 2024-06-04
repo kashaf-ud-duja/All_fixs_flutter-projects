@@ -92,7 +92,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   obscureText: false,
                   fontSize: 16.sp,
                   iconsize: 16.sp,
-                  labelSize: 16.sp),
+                  labelSize: 16.sp, controller: TextEditingController(),),
             ),
             Padding(
               padding: const EdgeInsets.all(10),
@@ -103,7 +103,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   obscureText: false,
                   fontSize: 16.sp,
                   iconsize: 16.sp,
-                  labelSize: 16.sp),
+                  labelSize: 16.sp, controller: TextEditingController(),),
             ),
             const SizedBox(
               height: 8,

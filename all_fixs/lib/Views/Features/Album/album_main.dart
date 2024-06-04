@@ -1,5 +1,4 @@
-import 'dart:ffi';
-
+import 'package:all_fixs/Views/Features/Album/my_album.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
@@ -36,9 +35,7 @@ class _AlbumMainState extends State<AlbumMain>
         );
       },
       children: [
-        Container(
-          color: Colors.red,
-        ),
+        MyAlbum(),
         Container(
           color: Colors.orange,
         ),
@@ -49,8 +46,6 @@ class _AlbumMainState extends State<AlbumMain>
   // BUILD function before rendering run in init state
   @override
   void initState() {
-
-
     animationController = AnimationController(
       vsync: this,
       duration: Duration(seconds: 1),
@@ -61,7 +56,6 @@ class _AlbumMainState extends State<AlbumMain>
     animation =
         Tween<double>(begin: 0, end: 1).animate(curve) as Animation<double>;
     animationController.forward();
-
 
     super.initState();
   }

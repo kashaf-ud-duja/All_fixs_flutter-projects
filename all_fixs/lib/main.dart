@@ -11,6 +11,8 @@ import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:all_fixs/Views/Profile/profile.dart';
 import 'package:all_fixs/Views/Profile/profile_settings.dart';
 import 'package:all_fixs/Views/Widgets/Auth/splash_loader_animation.dart';
+import 'package:all_fixs/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:all_fixs/Views/Auth/Forget_Password.dart';
 import 'package:all_fixs/Views/Auth/Login.dart';
@@ -20,7 +22,10 @@ import 'package:all_fixs/Views/Invitation/invite_friend.dart';
 import 'package:all_fixs/Views/Profile/profile_setup.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(Allfixs());
 }
 
@@ -34,7 +39,7 @@ class Allfixs extends StatelessWidget {
         //   useMaterial3: false,
         // ),
         title: 'All Fixs',
-        home: AlbumMain(),
+        home: Register(),
         debugShowCheckedModeBanner: false,
       );
     });
