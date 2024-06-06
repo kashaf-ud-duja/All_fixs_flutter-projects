@@ -33,7 +33,16 @@ class UserDatabase {
         .collection("users")
         .doc("z1BO24gOXZWKB0x4DbhxeXVzSIo2")
         .get();
-        print(documentSnapshot.data());
+myUser.uid = documentSnapshot.data()!["uid"];
+myUser.emailAddress = documentSnapshot.data()!["emailAddress"];
+myUser.avatarURL = documentSnapshot.data()!["avatarURL"];
+myUser.username = documentSnapshot.data()!["username"];
+myUser.displayname = documentSnapshot.data()!["displayname"];
+myUser.chatRoomid = documentSnapshot.data()!["chatRoomid"];
+myUser.friendsid = documentSnapshot.data()!["friendsid"];
+myUser.gender = documentSnapshot.data()!["gender"];
+myUser.phonenumber = documentSnapshot.data()!["phonenumber"];
+myUser.accountcreated = documentSnapshot.data()!["accountcreated"];
     return myUser;
   }
 }

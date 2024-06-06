@@ -1,3 +1,4 @@
+import 'package:all_fixs/Views/Features/Album/friend_album.dart';
 import 'package:all_fixs/Views/Features/Album/my_album.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/animation.dart';
@@ -36,9 +37,7 @@ class _AlbumMainState extends State<AlbumMain>
       },
       children: [
         MyAlbum(),
-        Container(
-          color: Colors.orange,
-        ),
+        FriendAlbum(),
       ],
     );
   }

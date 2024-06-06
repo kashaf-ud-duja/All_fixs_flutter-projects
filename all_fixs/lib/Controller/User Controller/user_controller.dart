@@ -2,8 +2,10 @@ import 'package:all_fixs/Models/my_user.dart';
 import 'package:all_fixs/Service/user_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_cloud_firestore/firebase_cloud_firestore.dart';
+import 'package:flutter/material.dart';
 
-class UserController {
+class UserController with ChangeNotifier {
+  MyUser currentUser = MyUser();
   FirebaseAuth auth = FirebaseAuth.instance;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
@@ -35,12 +37,53 @@ class UserController {
       UserCredential loginResults = await auth.signInWithEmailAndPassword(
           email: email, password: password);
       if (loginResults.user != null) {
-        UserDatabase().getUserInfoById(loginResults.user!.uid);
+        currentUser =
+            await UserDatabase().getUserInfoById(loginResults.user!.uid);
+        print(currentUser.username);
       }
       return true;
     } catch (e) {
       print(e);
       return false;
+    }
+  }
+
+  Future<bool> signOut() async {
+    try {
+      await auth.signOut();
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
+  void setCurrentUser(MyUser user) {
+    currentUser = user;
+    notifyListeners();
+  }
+
+  Future<MyUser> checkUserSigninInfo() async {
+    try {
+      MyUser myUser = MyUser();
+      myUser.isLoadingStartupData = true;
+      currentUser = myUser;
+      auth.authStateChanges().listen((event) async {
+        if (event?.uid == null) {
+          myUser.uid = null;
+          myUser.isLoadingStartupData = false;
+          setCurrentUser(myUser);
+        } else {
+          myUser.uid = event?.uid;
+          myUser = await UserDatabase().getUserInfoById(auth.currentUser!.uid);
+          setCurrentUser(myUser);
+        }
+      });
+      print(myUser.uid);
+      return myUser;
+    } catch (e) {
+      print(e);
+      return MyUser();
     }
   }
 }

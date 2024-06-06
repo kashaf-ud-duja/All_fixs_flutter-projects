@@ -11,6 +11,7 @@ class MyUser {
   String? chatRoomid;
   String? friendsid;
   String? phonenumber;
+  bool? isLoadingStartupData = true;
   Timestamp? accountcreated;
 
   MyUser(
@@ -24,5 +25,6 @@ class MyUser {
       this.gender,
       this.password,
       this.phonenumber,
-      this.username});
+      this.username,
+      this.isLoadingStartupData});
 }

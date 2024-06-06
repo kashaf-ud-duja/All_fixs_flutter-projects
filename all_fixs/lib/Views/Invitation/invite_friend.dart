@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:all_fixs/Views/Homepage/home_page.dart';
 import 'package:all_fixs/Views/Invitation/accept_invite.dart';
 import 'package:all_fixs/Views/Profile/profile_setup.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
@@ -7,10 +10,18 @@ import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
 
-class InviteFriend extends StatelessWidget {
+class InviteFriend extends StatefulWidget {
   const InviteFriend({super.key});
 
+  @override
+  State<InviteFriend> createState() => _InviteFriendState();
+}
+
+class _InviteFriendState extends State<InviteFriend> {
+  final RoundedLoadingButtonController _profileSetupbtnController =
+      RoundedLoadingButtonController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,25 +166,54 @@ class InviteFriend extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.orange[900]),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                minimumSize: MaterialStateProperty.all(Size(150, 50)),
-              ),
-              onPressed: () {},
-              child: Text(
-                "Find a fixer",
-                style: GoogleFonts.poppins(
-                  fontSize: 20.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
+            Container(
+              width: 250,
+              child: Hero(
+                tag: "Auth",
+                child: RoundedLoadingButton(
+                  controller: _profileSetupbtnController,
+                  onPressed: () {
+                    Timer(Duration(seconds: 3), () {
+                      _profileSetupbtnController.success();
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: HomePage()));
+                    });
+                  },
+                  child: Text(
+                    "HomePage",
+                    style: GoogleFonts.poppins(
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  color: Colors.orange[900],
+                  width: 2000.w,
+                  borderRadius: 10,
                 ),
               ),
             ),
+            // ElevatedButton(
+            //   style: ButtonStyle(
+            //     backgroundColor: MaterialStateProperty.all(Colors.orange[900]),
+            //     shape: MaterialStateProperty.all(
+            //       RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(20)),
+            //     ),
+            //     minimumSize: MaterialStateProperty.all(Size(150, 50)),
+            //   ),
+            //   onPressed: () {},
+            //   child: Text(
+            //     "Find a fixer",
+            //     style: GoogleFonts.poppins(
+            //       fontSize: 20.sp,
+            //       color: Colors.white,
+            //       fontWeight: FontWeight.w500,
+            //     ),
+            //   ),
+            // ),
             const SizedBox(
               height: 50,
             ),

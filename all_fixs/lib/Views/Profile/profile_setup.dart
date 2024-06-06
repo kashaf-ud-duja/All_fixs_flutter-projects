@@ -1,13 +1,19 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:all_fixs/Views/Invitation/invite_friend.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
 import 'package:all_fixs/Views/Widgets/Auth/auth_text_field.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:image/image.dart' as Im;
+import 'package:uuid/uuid.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class ProfileSetup extends StatefulWidget {
   const ProfileSetup({super.key});
@@ -20,6 +26,48 @@ class _ProfileSetupState extends State<ProfileSetup> {
       RoundedLoadingButtonController();
 
   bool ismale = true;
+  File? file;
+  bool isUploading = false;
+  ImagePicker img = ImagePicker();
+  String postId = Uuid().v4();
+
+  handleChooseFromGallery() async {
+    var pickImage = await img.pickImage(
+        source: ImageSource.gallery, maxHeight: 1080, maxWidth: 1920);
+    File inputoutput = File(pickImage!.path);
+    setState(() {
+      file = inputoutput;
+    });
+    if (file != null) {
+      uploadToStorage();
+    }
+  }
+
+  uploadToStorage() async {
+    setState(() {
+      isUploading = true;
+    });
+    await compressImage();
+    String mediaUrl =await uploadImage();
+  }
+
+  uploadImage() {
+    UploadTask uploadTask = FirebaseStorage.instance
+        .ref()
+        .child("profilePictures/$postId.jpg")
+        .putFile(file!);
+  }
+
+  compressImage() async {
+    final tempDir = await getTemporaryDirectory();
+    final path = tempDir.path;
+    Im.Image? imageFile = Im.decodeImage(file!.readAsBytesSync());
+    final compressedImageFile = File("$path/image_$postId.jpg")
+      ..writeAsBytesSync(Im.encodeJpg(imageFile!, quality: 90));
+    setState(() {
+      file = compressedImageFile;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +115,9 @@ class _ProfileSetupState extends State<ProfileSetup> {
             ),
             CircularProfileAvatar(
               '',
+              onTap: () {
+                print("TAPPED");
+              },
               radius: 50,
               backgroundColor: Colors.grey,
               borderWidth: 10,
@@ -86,24 +137,28 @@ class _ProfileSetupState extends State<ProfileSetup> {
             Padding(
               padding: const EdgeInsets.all(10),
               child: AuthTextField(
-                  icon: Icons.alternate_email,
-                  keyboardType: TextInputType.emailAddress,
-                  labelText: "enter mail",
-                  obscureText: false,
-                  fontSize: 16.sp,
-                  iconsize: 16.sp,
-                  labelSize: 16.sp, controller: TextEditingController(),),
+                icon: Icons.alternate_email,
+                keyboardType: TextInputType.name,
+                labelText: "Enter Name",
+                obscureText: false,
+                fontSize: 16.sp,
+                iconsize: 16.sp,
+                labelSize: 16.sp,
+                controller: TextEditingController(),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: AuthTextField(
-                  icon: Icons.password,
-                  keyboardType: TextInputType.visiblePassword,
-                  labelText: "Password",
-                  obscureText: false,
-                  fontSize: 16.sp,
-                  iconsize: 16.sp,
-                  labelSize: 16.sp, controller: TextEditingController(),),
+                icon: Icons.password,
+                keyboardType: TextInputType.none,
+                labelText: "Username",
+                obscureText: false,
+                fontSize: 16.sp,
+                iconsize: 16.sp,
+                labelSize: 16.sp,
+                controller: TextEditingController(),
+              ),
             ),
             const SizedBox(
               height: 8,

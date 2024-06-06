@@ -1,5 +1,9 @@
 import 'dart:ui';
 
+import 'package:all_fixs/Views/Features/Album/my_album.dart';
+import 'package:all_fixs/Views/Features/DeviceInfo/device_info.dart';
+import 'package:all_fixs/Views/Homepage/home_page.dart';
+import 'package:all_fixs/Views/Invitation/accept_invite.dart';
 import 'package:all_fixs/Views/Widgets/Dashboard/dashboard_gradient_feature.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({super.key});
@@ -225,21 +230,24 @@ class DashBoard extends StatelessWidget {
           ),
           Row(
             children: [
-              Flexible(
-                  child: DashboardGradientFeature(
-                Iconimage: "assets/dashboard/phone.png",
-                buttontext: "Device info",
-                clr: [
-                  const Color.fromRGBO(129, 199, 132, 1),
-                  Color.fromARGB(255, 56, 142, 60)
-                ],
-              )),
-              Flexible(
-                  child: DashboardGradientFeature(
-                Iconimage: "assets/dashboard/blackgallery.png",
-                buttontext: "Gallery",
-                clr: [Colors.yellow, const Color.fromRGBO(251, 192, 45, 1)],
-              )),
+ Flexible(
+                    child: DashboardGradientFeature(
+                  Iconimage: "assets/dashboard/phone.png",
+                  buttontext: "Device info",
+                  clr: [
+                    const Color.fromRGBO(129, 199, 132, 1),
+                    Color.fromARGB(255, 56, 142, 60)
+                  ],
+                )
+              ),
+
+Flexible(
+                    child: DashboardGradientFeature(
+                  Iconimage: "assets/dashboard/blackgallery.png",
+                  buttontext: "Gallery",
+                  clr: [Colors.yellow, const Color.fromRGBO(251, 192, 45, 1)],
+                )),
+
               Flexible(
                   child: DashboardGradientFeature(
                 Iconimage: "assets/dashboard/blacksmile.png",
