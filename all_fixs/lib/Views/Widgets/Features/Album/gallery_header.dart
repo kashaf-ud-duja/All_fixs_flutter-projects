@@ -194,6 +194,7 @@ class GalleryHeader extends StatelessWidget {
                                       ),
                                     ),
                                   ),
+                                  btnOkColor: Colors.orange[900],
                                   btnOkOnPress: () {})
                               .show();
                         },
