@@ -1,5 +1,7 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
+import 'package:focused_menu/focused_menu.dart';
 import 'package:getwidget/getwidget.dart';
 import 'dart:ui' as prefix0;
 import 'package:google_fonts/google_fonts.dart';
@@ -110,23 +112,22 @@ class AlbumPost extends StatelessWidget {
                                   ),
                                   Center(
                                     child: Slider(
-                                      value: 10,
-                                      min: 1.0,
-                                      max: 20.0,
-                                      activeColor: Colors.orange[900],
-                                      inactiveColor: Colors.black,
-                                      onChangeStart: (value) {},
-                                      onChangeEnd: (value) {},
-                                      onChanged: (double newValue) {
-                                        
-                                        // setState(() {
-                                        //   var _value = newValue.round();
-                                        // }); 
-                                      },
-                                       semanticFormatterCallback: (double newValue) {  
-                                return '${newValue.round()} dollars';  
-                              }  
-                                    ),
+                                        value: 10,
+                                        min: 1.0,
+                                        max: 20.0,
+                                        activeColor: Colors.orange[900],
+                                        inactiveColor: Colors.black,
+                                        onChangeStart: (value) {},
+                                        onChangeEnd: (value) {},
+                                        onChanged: (double newValue) {
+                                          // setState(() {
+                                          //   var _value = newValue.round();
+                                          // });
+                                        },
+                                        semanticFormatterCallback:
+                                            (double newValue) {
+                                          return '${newValue.round()} dollars';
+                                        }),
                                   )
                                 ],
                               ),
@@ -216,6 +217,27 @@ class AlbumPost extends StatelessWidget {
                         ),
                       ],
                     ),
+                    FocusedMenuHolder(
+                      menuWidth: MediaQuery.of(context).size.width * 0.50,
+                      blurSize: 2.0,
+                      menuItemExtent: 45,
+                      menuBoxDecoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                      ),
+                      menuItems: [],
+                      child: ExpandableText(
+                          "we will pass the caption in here,we will pass the caption in herewe will pass the caption in here,we will pass the caption in here,we will pass the caption in here,we will pass the caption in here",
+                          expandText: "show more",
+                          collapseText: "show less",
+                          maxLines: 2,
+                          linkColor: Colors.orange[900],
+                          style: GoogleFonts.nunito(
+                              fontSize: 16, fontWeight: FontWeight.w400),
+                          textAlign: TextAlign.left),
+                    )
                   ],
                 ),
               )
