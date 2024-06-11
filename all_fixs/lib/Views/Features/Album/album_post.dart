@@ -2,6 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:focused_menu/focused_menu.dart';
+import 'package:focused_menu/modals.dart';
 import 'package:getwidget/getwidget.dart';
 import 'dart:ui' as prefix0;
 import 'package:google_fonts/google_fonts.dart';
@@ -221,13 +222,88 @@ class AlbumPost extends StatelessWidget {
                       menuWidth: MediaQuery.of(context).size.width * 0.50,
                       blurSize: 2.0,
                       menuItemExtent: 45,
+                      duration: Duration(milliseconds: 100),
+                      animateMenuItems: true,
+                      blurBackgroundColor: Colors.black54,
+                      menuOffset: 10.0,
+                      bottomOffsetHeight: 80,
                       menuBoxDecoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
                         ),
                       ),
-                      menuItems: [],
+                      menuItems: [
+                        FocusedMenuItem(
+                          title: Text(
+                            "Copy",
+                            style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          trailingIcon: Icon(Icons.copy),
+                          onPressed: () {},
+                        ),
+                        FocusedMenuItem(
+                          title: Text(
+                            "Edit",
+                            style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          trailingIcon: Icon(Icons.edit_document,),
+                          onPressed: () {
+                            AwesomeDialog(
+                                    context: context,
+                                    animType: AnimType.scale,
+                                    dialogType: DialogType.noHeader,
+                                    body: Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(20),
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            labelText: "Edit Caption",
+                                            labelStyle:
+                                                TextStyle(fontFamily: "Nunito"),
+                                            fillColor: Colors.black,
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: BorderSide(
+                                                  color: Colors.black),
+                                            ),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: BorderSide(
+                                                color: const Color.fromRGBO(
+                                                    230, 81, 0, 1),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: const BorderSide(
+                                                color: Colors.green,
+                                              ),
+                                            ),
+                                          ),
+                                          keyboardType: TextInputType.multiline,
+                                          maxLines: null,
+                                          minLines: 2,
+                                        ),
+                                      ),
+                                    ),
+                                    dismissOnBackKeyPress: true,
+                                    isDense: true,
+                                    btnOkText: "Confirm Caption",
+                                    btnOkColor: Colors.orange[900],
+                                    btnOkOnPress: () {})
+                                .show();
+                          },
+                        ),
+                      ],
+                      onPressed: () {},
                       child: ExpandableText(
                           "we will pass the caption in here,we will pass the caption in herewe will pass the caption in here,we will pass the caption in here,we will pass the caption in here,we will pass the caption in here",
                           expandText: "show more",
