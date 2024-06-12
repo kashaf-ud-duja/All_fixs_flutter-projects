@@ -6,6 +6,7 @@ import 'package:focused_menu/modals.dart';
 import 'package:getwidget/getwidget.dart';
 import 'dart:ui' as prefix0;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:list_tile_more_customizable/list_tile_more_customizable.dart';
 import 'package:slider_button/slider_button.dart';
 
 class AlbumPost extends StatelessWidget {
@@ -251,7 +252,9 @@ class AlbumPost extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          trailingIcon: Icon(Icons.edit_document,),
+                          trailingIcon: Icon(
+                            Icons.edit_document,
+                          ),
                           onPressed: () {
                             AwesomeDialog(
                                     context: context,
@@ -313,7 +316,136 @@ class AlbumPost extends StatelessWidget {
                           style: GoogleFonts.nunito(
                               fontSize: 16, fontWeight: FontWeight.w400),
                           textAlign: TextAlign.left),
-                    )
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Comments",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.nunito(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                    ListView.builder(
+                      itemCount: 1,
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext context, int index) {
+                        return FocusedMenuHolder(
+                          menuWidth: MediaQuery.of(context).size.width * 0.50,
+                      blurSize: 2.0,
+                      menuItemExtent: 45,
+                      duration: Duration(milliseconds: 100),
+                      animateMenuItems: true,
+                      blurBackgroundColor: Colors.black54,
+                      menuOffset: 10.0,
+                      bottomOffsetHeight: 80,
+                      menuBoxDecoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                      ),
+                         menuItems: [
+                        FocusedMenuItem(
+                          title: Text(
+                            "Copy",
+                            style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          trailingIcon: Icon(Icons.copy),
+                          onPressed: () {},
+                        ),
+                        FocusedMenuItem(
+                          title: Text(
+                            "Edit",
+                            style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          trailingIcon: Icon(
+                            Icons.edit_document,
+                          ),
+                          onPressed: () {
+                            AwesomeDialog(
+                                    context: context,
+                                    animType: AnimType.scale,
+                                    dialogType: DialogType.noHeader,
+                                    body: Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(20),
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            labelText: "Edit Caption",
+                                            labelStyle:
+                                                TextStyle(fontFamily: "Nunito"),
+                                            fillColor: Colors.black,
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: BorderSide(
+                                                  color: Colors.black),
+                                            ),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: BorderSide(
+                                                color: const Color.fromRGBO(
+                                                    230, 81, 0, 1),
+                                              ),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              borderSide: const BorderSide(
+                                                color: Colors.green,
+                                              ),
+                                            ),
+                                          ),
+                                          keyboardType: TextInputType.multiline,
+                                          maxLines: null,
+                                          minLines: 2,
+                                        ),
+                                      ),
+                                    ),
+                                    dismissOnBackKeyPress: true,
+                                    isDense: true,
+                                    btnOkText: "Confirm Caption",
+                                    btnOkColor: Colors.orange[900],
+                                    btnOkOnPress: () {})
+                                .show();
+                          },
+                        ),
+                      ],
+                          onPressed:(){},
+                          child: ListTileMoreCustomizable(
+                            title: Text("@noor"),
+                            leading: GFAvatar(
+                              backgroundColor: Colors.blue,
+                            ),
+                            horizontalTitleGap: 0.0,
+                            minVerticalPadding: 10.0,
+                            minLeadingWidth: 60,
+                            contentPadding: EdgeInsets.all(0),
+                            isThreeLine: false,
+                            subtitle: Text("this is my comment"),
+                            // leading is for left
+                            trailing: Text(
+                              "1 min ago",
+                              style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            ),
+                            onTap: null,
+                            onLongPress: null,
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               )
