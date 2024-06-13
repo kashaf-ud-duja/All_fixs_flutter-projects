@@ -2,6 +2,7 @@
 import 'package:all_fixs/Controller/User%20Controller/user_controller.dart';
 import 'package:all_fixs/Views/Features/Album/album_main.dart';
 import 'package:all_fixs/Views/Features/Album/album_post.dart';
+import 'package:all_fixs/Views/Features/Album/album_new_post.dart';
 import 'package:all_fixs/Views/Features/DeviceInfo/BatteryInfo/battery_info.dart';
 import 'package:all_fixs/Views/Features/DeviceInfo/Device%20Specs/device_specs.dart';
 import 'package:all_fixs/Views/Features/DeviceInfo/General%20Info/general_info.dart';
@@ -50,7 +51,7 @@ class Allfixs extends StatelessWidget {
           //   useMaterial3: false,
           // ),
           title: 'All Fixs',
-          home: AlbumPost(),
+          home: AlbumNewPost(),
           debugShowCheckedModeBanner: false,
         );
       }),

@@ -416,43 +416,46 @@ class AlbumPost extends StatelessWidget {
                   ],
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: null,
-                        focusNode: null,
-                        keyboardType: TextInputType.multiline,
-                        textCapitalization: TextCapitalization.sentences,
-                        maxLines: 3,
-                        minLines: 1,
-                        style: TextStyle(color: Colors.white),
-                        onChanged: (value) {},
-                        decoration: InputDecoration(
-                          hintText: "start a conversation",
-                          hintStyle: TextStyle(
-                              fontFamily: "nunito", color: Colors.white),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(60)),
-                            borderSide: BorderSide.none,
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          controller: null,
+                          focusNode: null,
+                          keyboardType: TextInputType.multiline,
+                          textCapitalization: TextCapitalization.sentences,
+                          maxLines: 3,
+                          minLines: 1,
+                          style: TextStyle(color: Colors.white),
+                          onChanged: (value) {},
+                          decoration: InputDecoration(
+                            hintText: "start a conversation",
+                            hintStyle: TextStyle(
+                                fontFamily: "nunito", color: Colors.white),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(60)),
+                              borderSide: BorderSide.none,
+                            ),
+                            contentPadding: EdgeInsets.all(20),
+                            filled: true,
+                            fillColor: Colors.orange[900],
                           ),
-                          contentPadding: EdgeInsets.all(20),
-                          filled: true,
-                          fillColor: Colors.orange[900],
                         ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.black,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
