@@ -1,3 +1,4 @@
+import 'package:all_fixs/Views/Features/Album/image_view.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:getwidget/getwidget.dart';
 import 'dart:ui' as prefix0;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:list_tile_more_customizable/list_tile_more_customizable.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:slider_button/slider_button.dart';
 
 class AlbumPost extends StatelessWidget {
@@ -50,7 +52,9 @@ class AlbumPost extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).pop();
+                                    },
                                     child: Padding(
                                       padding: const EdgeInsets.all(20.0),
                                       child: Icon(
@@ -81,13 +85,28 @@ class AlbumPost extends StatelessWidget {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(20.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(20),
-                                  ),
-                                  child: Image.network(
-                                    "https://images.unsplash.com/photo-1509043759401-136742328bb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
-                                    fit: BoxFit.cover,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: ImageView(url: 'https://images.unsplash.com/photo-1509043759401-136742328bb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D',),
+                                      ),
+                                    );
+                                  },
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(20),
+                                    ),
+                                    child: Hero(
+                                      tag:
+                                          "https://images.unsplash.com/photo-1509043759401-136742328bb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
+                                      child: Image.network(
+                                        "https://images.unsplash.com/photo-1509043759401-136742328bb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),

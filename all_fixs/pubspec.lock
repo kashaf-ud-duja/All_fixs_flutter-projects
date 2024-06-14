@@ -888,6 +888,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  route_transitions:
+    dependency: "direct main"
+    description:
+      name: route_transitions
+      sha256: "42f89f161b6c8ab4b497f23af3d684985b2bfd5c73e1a0240e8b5a2aca7b3812"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   rxdart:
     dependency: transitive
     description:

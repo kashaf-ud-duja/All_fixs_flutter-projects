@@ -1,3 +1,5 @@
+import 'package:all_fixs/Views/Features/Album/album_post.dart';
+import 'package:all_fixs/Views/Features/Album/image_view.dart';
 import 'package:all_fixs/Views/Widgets/Features/Album/gallery_header.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
@@ -7,6 +9,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class MyAlbum extends StatelessWidget {
   const MyAlbum({super.key});
@@ -72,13 +75,25 @@ class MyAlbum extends StatelessWidget {
                       ),
                       onPressed: () {}),
                 ],
-                onPressed: () {},
+                onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        child: AlbumPost(),
+                      ),
+                  );
+                },
                 child: Card(
                   // height: 40,
                   // width: 40,
                   child: Column(
                     children: <Widget>[
-                      Image.asset("assets/images/t.jpg"),
+                      Hero(
+                        tag:"https://cdn.pixabay.com/photo/2020/07/08/08/07/daisy-5383056_1280.jpg" ,
+                        child: Image.network("https://cdn.pixabay.com/photo/2020/07/08/08/07/daisy-5383056_1280.jpg",
+                        fit: BoxFit.cover,),
+                      ),
                     ],
                   ),
                 ),
@@ -94,4 +109,3 @@ class MyAlbum extends StatelessWidget {
     );
   }
 }
-
