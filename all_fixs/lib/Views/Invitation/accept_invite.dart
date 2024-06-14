@@ -105,13 +105,13 @@ class AcceptInvitation extends StatelessWidget {
                                     child: ElevatedButton(
                                       style: ButtonStyle(
                                         backgroundColor:
-                                            MaterialStateProperty.all(Colors.green),
-                                        shape: MaterialStateProperty.all(
+                                            WidgetStateProperty.all(Colors.green),
+                                        shape: WidgetStateProperty.all(
                                           RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(10)),
                                         ),
-                                        minimumSize: MaterialStateProperty.all(
+                                        minimumSize: WidgetStateProperty.all(
                                             Size(130, 40)),
                                       ),
                                       onPressed: () {},
