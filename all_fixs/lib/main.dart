@@ -51,7 +51,7 @@ class Allfixs extends StatelessWidget {
           //   useMaterial3: false,
           // ),
           title: 'All Fixs',
-          home: AlbumNewPost(),
+          home: AlbumMain(),
           debugShowCheckedModeBanner: false,
         );
       }),

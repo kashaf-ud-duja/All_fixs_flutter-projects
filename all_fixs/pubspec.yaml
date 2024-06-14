@@ -64,6 +64,7 @@ dependencies:
   expandable_text: ^2.3.0
   google_maps_flutter: ^2.7.0
   list_tile_more_customizable: ^3.0.0
+  photo_view: ^0.15.0
 
 
 dev_dependencies:

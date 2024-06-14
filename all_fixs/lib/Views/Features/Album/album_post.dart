@@ -249,7 +249,7 @@ class AlbumPost extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              trailingIcon: Icon(Icons.copy),
+                              trailingIcon: const Icon(Icons.copy),
                               onPressed: () {},
                             ),
                             FocusedMenuItem(
@@ -259,7 +259,7 @@ class AlbumPost extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              trailingIcon: Icon(
+                              trailingIcon: const Icon(
                                 Icons.edit_document,
                               ),
                               onPressed: () {
@@ -273,21 +273,21 @@ class AlbumPost extends StatelessWidget {
                                             child: TextField(
                                               decoration: InputDecoration(
                                                 labelText: "Edit Caption",
-                                                labelStyle: TextStyle(
+                                                labelStyle: const TextStyle(
                                                     fontFamily: "Nunito"),
                                                 fillColor: Colors.black,
                                                 enabledBorder:
                                                     OutlineInputBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(20),
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                       color: Colors.black),
                                                 ),
                                                 border: OutlineInputBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(20),
-                                                  borderSide: BorderSide(
-                                                    color: const Color.fromRGBO(
+                                                  borderSide: const BorderSide(
+                                                    color: Color.fromRGBO(
                                                         230, 81, 0, 1),
                                                   ),
                                                 ),
